@@ -59,66 +59,83 @@
         </ul>
 
         <math>
-            <mi>o</mi>
-            <mo>=</mo>
-            <mi>I0w</mi>
-            <mo>=</mo>
-            <mn>5</mn>
-            <mi>r</mi>
-            <mo>=</mo>
-            <mn>2</mn>
-            <mi>y</mi>
-            <br><mi>B</mi>
-            <mo>=</mo>
-            <mn>9</mn>
-            <mi>w</mi>
-            <mo>=</mo>
-            <mn>3</mn>
-            <mi>g</mi>
-            <br><mi>t</mi>
-            <mo>=</mo>
-            <mn>4</mn>
-            <mi>r</mi>
-            <mo>=</mo>
-            <mn>2</mn>
-            <mi>p</mi>
-            <mo>=</mo>
-            <mn>8</mn>
-            <mi>w</mi>
-            <br>
-            <mi>b</mi>
-            <mo>=</mo>
-            <mn>7</mn>
-            <mi>w</mi>
-            <br><mi>d</mi>
-            <mo>=</mo>
-            <mn>6</mn>
-            <mi>w</mi>
-            <mo>=</mo>
-            <mn>3</mn>
-            <mi>r</mi>
-            <mo>=</mo>
-            <mn>2</mn>
-            <mi>g</mi>
-            <br><mi>y</mi>
-            <mo>=</mo>
-            <mn>5</mn>
-            <mi>w</mi>
-            <br><mi>p</mi>
-            <mo>=</mo>
-            <mn>4</mn>
-            <mi>w</mi>
-            <mo>=</mo>
-            <mn>2</mn>
-            <mi> r</mi>
-            <br><mi>g</mi>
-            <mo>=</mo>
-            <mn>3</mn>
-            <mi> w</mi>
-            <br><mi>r</mi>
-            <mo>=</mo>
-            <mn>2</mn>
-            <mi>w</mi>
+            <mrow>
+                <mi>o</mi>
+                <mo>=</mo>
+                <mi>I0w</mi>
+                <mo>=</mo>
+                <mn>5</mn>
+                <mi>r</mi>
+                <mo>=</mo>
+                <mn>2</mn>
+                <mi>y</mi>
+            </mrow>
+            <mrow>
+                <mi>B</mi>
+                <mo>=</mo>
+                <mn>9</mn>
+                <mi>w</mi>
+                <mo>=</mo>
+                <mn>3</mn>
+                <mi>g</mi>
+            </mrow>
+            <mrow>
+                <mi>t</mi>
+                <mo>=</mo>
+                <mn>4</mn>
+                <mi>r</mi>
+                <mo>=</mo>
+                <mn>2</mn>
+                <mi>p</mi>
+                <mo>=</mo>
+                <mn>8</mn>
+                <mi>w</mi>
+            </mrow> 
+            <mrow>
+                <mi>b</mi>
+                <mo>=</mo>
+                <mn>7</mn>
+                <mi>w</mi>
+            </mrow>            
+            <mrow>
+                <mi>d</mi>
+                <mo>=</mo>
+                <mn>6</mn>
+                <mi>w</mi>
+                <mo>=</mo>
+                <mn>3</mn>
+                <mi>r</mi>
+                <mo>=</mo>
+                <mn>2</mn>
+                <mi>g</mi>
+            </mrow>            
+            <mrow>
+                <mi>y</mi>
+                <mo>=</mo>
+                <mn>5</mn>
+                <mi>w</mi>
+            </mrow>
+            <mrow>
+                <mi>p</mi>
+                <mo>=</mo>
+                <mn>4</mn>
+                <mi>w</mi>
+                <mo>=</mo>
+                <mn>2</mn>
+                <mi> r</mi>
+            </mrow>
+            <mrow>
+                <mi>g</mi>
+                <mo>=</mo>
+                <mn>3</mn>
+                <mi> w</mi>
+            </mrow>
+            <mrow>
+                <mi>r</mi>
+                <mo>=</mo>
+                <mn>2</mn>
+                <mi>w</mi>
+            </mrow>
         </math>
 
         <p>
@@ -142,7 +159,7 @@
         </p>
             
         <p>
-            data Colour = NaC | Red | Purple | DarkGreen | Brown | Orange deriving (Show, Ord, Eq, Enum) 
+            <code>data Colour = NaC | Red | Purple | DarkGreen | Brown | Orange deriving (Show, Ord, Eq, Enum) </code>
             <br>w=2
             <br>g = 3*w
             <br>p = 2*r
@@ -161,7 +178,7 @@
         <p>
             would take the role of the 'engine' and the other 'interpreter'. This was extended to 
             <code>succ $ succ</code> (successor of successor) which uses function composition $. Some children 
-            could creatively enjoy inventing functions such as <code>succ $ succ $ succ</code> White to test the technique. 
+            could creatively enjoy inventing functions such as <code>succ $ succ $ succ White</code> to test the technique. 
             The children experimented by writing down their calls before building themselves a rod calculator in Haskell. 
             The language soon became a natural part of lessons and meant that it was easy to progress to the next step. 
         </p>
@@ -178,16 +195,16 @@
         
         <p>
             Very soon the children were able to construct their own rod calculator in Haskell, by first constructing the engine 
-            using the Colour data type. Then the children asked the same role-play questions, this time by typing the language 
-            into the interpreter window. It soon became apparent that errors in the engine meant that the interpreter would not 
+            using the <code>Colour</code> data type. Then the children asked the same role-play questions, this time by typing the 
+            language into the interpreter window. It soon became apparent that errors in the engine meant that the interpreter would not 
             run, and that this would require carefully debugging and retyping. The children could spot bugs in the engine because 
             they had already worked out the answer. The staircase was a familiar pattern, so they could predict what the output should be. 
-            Children were also able to edit the Colour data type to model odd or even staircases and test their functions to see 
-            what the effect would be on the derived successor function. A transcript (see insert) shows a pupil working with the
-            number names for the rods, measured with White rather than the colour names. He becomes aware as he is speaking 
+            Children were also able to edit the <code>Colour</code> data type to model odd or even staircases and test their functions to 
+            see what the effect would be on the derived <code>successor</code> function. A transcript (see insert) shows a pupil working 
+            with the number names for the rods, measured with White rather than the colour names. He becomes aware as he is speaking 
             that the version of the succ function that works for a staircase with a step size White is distinct from the version of 
-            succ in an even staircase, and he corrects himself. It is clear to see that he has constructed an image of the staircase and 
-            is virtually traversing it.
+            <code>succ</code> in an even staircase, and he corrects himself. It is clear to see that he has constructed an image of 
+            the staircase and is virtually traversing it.
         </p>
 
         <p>Transcript of a conversation about program behaviour</p>
@@ -201,11 +218,12 @@
 
         <p> WHERE TO GO NEXT <br> Many Cuisenaire and Gattegno resources can be found online:
             <ul>
-                <li>New developments in arithmetic teaching in Britain: introducing the concept of 'set' helloworld.cc/2pYFgOw</li>
-                <li>The common sense of teaching mathematics: helloworld.cc/2p9dyKO</li>
-                <li>Gattegno Mathematics, Book 1: helloworld.cc/2qz7xZe</li>
-                <li>Virtual Rods: helloworld.cc/2pI8ctc</li>
-                <li>Sample code for these exercises: helloworld.cc/2pFyx9j</li>
+                <li>New developments in arithmetic teaching in Britain: introducing the concept of 'set' 
+                    <a href="http://helloworld.cc/2pYFgOw">helloworld.cc/2pYFgOw</a> </li>
+                <li>The common sense of teaching mathematics: <a href="http://helloworld.cc/2p9dyKO">helloworld.cc/2p9dyKO</a></li>
+                <li>Gattegno Mathematics, Book 1: <a href="http://helloworld.cc/2qz7xZe">helloworld.cc/2qz7xZe</a></li>
+                <li>Virtual Rods: <a href="http://helloworld.cc/2pI8ctc">helloworld.cc/2pI8ctc</a></li>
+                <li>Sample code for these exercises: <a href="http://helloworld.cc/2pFyx9j">helloworld.cc/2pFyx9j</a></li>
             </ul>
         </p>  
     </article>
