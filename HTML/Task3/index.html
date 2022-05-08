@@ -12,50 +12,53 @@
         Fill out the form to get a free consultation.</p>
     <form>
         <div>
-            <label for="Your company name*">Your company name<abbr title="required" aria-label="required">*</abbr></label>
-            <input id="Your company name*" type="text" name="Your company name*">
+            <label for="Your company name*">Your company name<span>*</span></label>
+            <input required id="name" type="text" name="Your company name*">
         </div>
         <div>
-            <label for="Nature of Business*">Nature of Business<abbr title="required" aria-label="required">*</abbr></label>
-            <input id="Nature of Business*" type="text" name="Nature of Business*">
+            <label for="Nature of Business*">Nature of Business<span>*</span></label>
+            <input required id="nature" type="text" name="Nature of Business*">
         </div>
         <div>
             <label for="Data of registration">Data of registration</label>
-            <input type="Data of registration" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+            <input id="data" type="data" placeholder="DD/MM/YYYY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
         </div>
         <div>
-            <label for="Country of registartion*">Country of registartion<abbr title="required" aria-label="required">*</abbr></label>
-            <input id="Country of registartion*" type="text" name="Country of registartion*">
+            <label for="Country of registartion*">Country of registartion<span>*</span></label>
+            <select required>
+                <option>Ukraine</option>
+                <option>China</option>
+                <option>UK</option>
+            </select>
         </div>
         <div>
             <label for="Adress">Adress</label>
-            <input id="Adress" type="text" name="Adress">
+            <input id="adress" type="text" name="Adress">
         </div>
         <div>
             <label for="Postcode">Postcode</label>
-            <input id="Postcode" type="text" name="Postcode">
+            <input id="postcode" type="text" pattern="[A-Z]{2}[0-9]{2}" name="Postcode">
         </div>
         <div>
             <label for="Contact name">Contact name</label>
-            <input id="Contact name" type="text" name="Contact name">
+            <input id="contactName" type="text" name="Contact name">
         </div>
         <div>
             <label for="Contact phone">Contact phone</label>
-            <input id="Contact phone" type="text" name="Contact phone">
+            <input id="contactPhone" type="tel" pattern="[0-9]{3}-[0-9]{3}" name="Contact phone">
         </div>
         <div>
-            <label for="Email*">Email<abbr title="required" aria-label="required">*</abbr></label>
-            <input id="Email*" type="text" name="Email*">
+            <label for="Email*">Email<span>*</span></label>
+            <input required id="email*" type="email" name="Email*">
         </div>
         <div>
             <label for="Idea">Let's talk about your idea</label>
-            <textarea id="Idea" name="user_message"></textarea>
+            <textarea id="idea" name="user_message" maxlength="320"></textarea>
         </div>
         <div class="slidecontainer">
             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
         <div>
-              <!-- Лучше не придумала: -->
             <input type="file" value="Upload Additional file">
             <p>File size of your documents should not exceed 10MB</p>
             </div>
@@ -65,19 +68,17 @@
             </p>
         </section>
         <div>
-            <input type="radio" id="Protection" name="drone" value="I want to protect my data by signing an NDA">
+            <input type="radio" id="protection" name="drone" value="I want to protect my data by signing an NDA">
             <label for="Protection">I want to protect my data by signing an NDA</label>
         </div>
         <div>
             <ul>
                 <li>
-                    <input type="checkbox" id="NDA" name="NDA"
-                    checked>
+                    <input type="checkbox" id="NDA" name="NDA">
              <label for="NDA">I want to protect my data by signing an NDA</label></li>
                 <li>
                     
-                    <input type="checkbox" id="Terms and Conditions" name="Terms and Conditions"
-                    checked>
+                    <input type="checkbox" id="terms" name="Terms and Conditions">
              <label for="Terms and Conditions">I have read and accept the Terms and Conditions</label></li>
             </ul>
         </div>
