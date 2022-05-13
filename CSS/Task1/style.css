@@ -1,0 +1,63 @@
+html {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 90px;
+  text-align:center;
+  font-family: "Roboto Flex" ;
+}
+
+p {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  text-align: justify;
+  margin: 10px;
+}
+
+figcaption {
+  font-family: "Roboto Flex";
+  text-align: left;
+  font-size: 15px;
+}
+
+.wrapper {
+    display:flex;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.wrapper2 {
+  display:flex;
+}
+
+p.title {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  text-align: center;
+}
+
+p.h{
+  text-align:center;
+  font-family: "Roboto Flex" ;
+  font-size: 32px;
+}
+
+ul{
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  text-align: justify;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.box :nth-child(1) { order: 1; }
+.box :nth-child(2) { order: 3; }
+.box :nth-child(3) { order: 4; }
+.box :nth-child(4) { order: 2; }
+.box :nth-child(5) { order: 5; }
+
+mrow {
+  font-family: "Brush Script MT", Brush Script Std, cursive;
+}
