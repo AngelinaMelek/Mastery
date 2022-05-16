@@ -13,19 +13,19 @@
     <form>
         <div>
             <label for="name">Your company name<span>*</span></label>
-            <input required id="name" type="text" name="Your company name*">
+            <input required id="name" type="text" name="ame">
         </div>
         <div>
             <label for="nature">Nature of Business<span>*</span></label>
-            <input required id="nature" type="text" name="Nature of Business*">
+            <input required id="nature" type="text" name="nature">
         </div>
         <div>
             <label for="date">Data of registration</label>
-            <input id="date" type="date" placeholder="DD/MM/YYYY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+            <input id="date" type="date" name="date" placeholder="DD/MM/YYYY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
         </div>
         <div>
-            <label for="Country of registartion*">Country of registartion<span>*</span></label>
-            <select required>
+            <label for="country">Country of registartion<span>*</span></label>
+            <select id="country" name="country" required>
                 <option>Ukraine</option>
                 <option>China</option>
                 <option>UK</option>
@@ -33,27 +33,27 @@
         </div>
         <div>
             <label for="adress">Adress</label>
-            <input id="adress" type="text" name="Adress">
+            <input id="adress" type="text" name="adress">
         </div>
         <div>
             <label for="postcode">Postcode</label>
-            <input id="postcode" type="text" pattern="[A-Z]{2}[0-9]{2}" name="Postcode">
+            <input id="postcode" type="text" pattern="[A-Z]{2}[0-9]{2}" name="postcode">
         </div>
         <div>
             <label for="contactName">Contact name</label>
-            <input id="contactName" type="text" name="Contact name">
+            <input id="contactName" type="text" name="contactName">
         </div>
         <div>
             <label for="contactPhone">Contact phone</label>
-            <input id="contactPhone" type="tel" pattern="[0-9]{3}-[0-9]{3}" name="Contact phone">
+            <input id="contactPhone" type="tel" pattern="[0-9]{3}-[0-9]{3}" name="contactPhone">
         </div>
         <div>
-            <label for="email*">Email<span>*</span></label>
-            <input required id="email*" type="email" name="Email*">
+            <label for="email">Email<span>*</span></label>
+            <input required id="email" type="email" name="email">
         </div>
         <div>
             <label for="idea">Let's talk about your idea</label>
-            <textarea id="idea" name="user_message" maxlength="320"></textarea>
+            <textarea id="idea" name="idea" maxlength="320"></textarea>
         </div>
         <div class="slidecontainer">
             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
@@ -68,7 +68,7 @@
             </p>
         </section>
         <div>
-            <input type="radio" id="protection" name="drone" value="I want to protect my data by signing an NDA">
+            <input type="radio" id="protection" name="protection" value="I want to protect my data by signing an NDA">
             <label for="protection">I want to protect my data by signing an NDA</label>
         </div>
         <div>
