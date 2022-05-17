@@ -1,82 +1,93 @@
-/* spacing */
 html {
-font-family: 'helvetica neue', helvetica, arial, sans-serif;
-font-size: 10px;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    font-size: 10px;
 }
 
-thead th {
-color: grey;
-border-bottom: 1px solid grey;
-padding: 20px;
-text-align: left;
+thead th{
+    color: grey;
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    text-align: left;
 }
 
 th {
-letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 
 td {
-letter-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+tr:nth-of-type(2n+1) {
+    font-weight: bold;
+}
+
+/* Не получается сделать ширину */
+td:nth-of-type(3){
+    width: 40%;
 }
 
 tbody td {
-text-align: left;
+    text-align: left;
 }
 
 tfoot th {
-text-align: right;
+    text-align: right;
 }
 
 table {
-table-layout: fixed;
-width: 100%;
-border-collapse: collapse;   
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;   
 }
-
-th, td {
-padding: 10px;
-}
-    
+  
 .statusDone {
-color: green;
+    color: green;
 }
 
 .statusPending {
-color: orangered;
+    color: orangered;
 }
 
+.optionButton {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    line-height: 0.5;
+}
+
+ul {
+    padding: 0;
+    width: 100%;
+}
+  
 li {
-display:inline-block;
-/* float: left; */
-overflow: hidden;
+    overflow: hidden; 
+    float: left;
+    margin: 5px;
+}
+  
+a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+}
+  
+.circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000;
+    text-align: center;
 }
 
-
-/* li {
-display: flex;
-flex-direction: row;
-align-items: center;
+.BigPrice {
+    font-size: 14px;
 }
-
-span { 
-height: 100%;
-vertical-align: middle;
-display: inline-block; } */
-/* 
-span {
-writing-mode: vertical-tb;
-} */
-
-.vertical {
-flex-direction: column;
-}
-
-/* 
-thead {
-}
-
-thead, tfoot {
-}
-
-thead th, tfoot th, tfoot td {
-} */
