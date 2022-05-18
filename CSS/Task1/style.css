@@ -1,22 +1,43 @@
 html {
+  font-family: "Open Sans", arial, sans-serif;
   font-size: 20px;
+}
+
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('./fonts/RobotoFlex/RobotoFlex-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans/OpenSans-Light.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('./fonts/DancingScript/DancingScript-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
   font-size: 90px;
   text-align:center;
-  font-family: "Roboto Flex" ;
+  font-family: "Roboto Flex", arial, sans-serif;
   margin: 10px;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
+p {  
   text-align: justify;
   margin: 10px;
 }
 
 figcaption {
-  font-family: "Roboto Flex";
+  font-family: "Roboto Flex", arial, sans-serif;
   text-align: left;
   font-size: 15px;
 }
@@ -27,23 +48,17 @@ figcaption {
     width: 100%;
 }
 
-.wrapper2 {
-  display:flex;
-}
-
 p.title {
-  font-family: "Open Sans", sans-serif;
   text-align: center;
 }
 
 p.h{
   text-align:center;
-  font-family: "Roboto Flex" ;
+  font-family: "Roboto Flex", arial, sans-serif;
   font-size: 32px;
 }
 
 ul{
-  font-family: 'Open Sans', sans-serif;
   text-align: justify;
 }
 
