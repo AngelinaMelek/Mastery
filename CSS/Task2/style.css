@@ -5,7 +5,8 @@ html {
 
 @font-face {
     font-family: 'Poppins';
-    src: url('fonts/Poppins/Poppins-ExtraLight.ttf') format('ttf');
+    src: url('fonts/Poppins/poppins-v20-latin-regular.woff2') format('woff2'),
+         url('fonts/Poppins/poppins-v20-latin-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
