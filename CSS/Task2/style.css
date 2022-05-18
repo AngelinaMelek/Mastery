@@ -1,0 +1,104 @@
+html {
+    font-family: 'Poppins', arial, sans-serif;
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-ExtraLight.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.thead-th {
+    color: grey;
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.td-spacing {
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.td-bold{
+    letter-spacing: 1px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;   
+}
+  
+.status-done {
+    color: #01f472;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.status-done::before {
+    content: "◎";
+    color: #01f472;
+}
+
+.status-pending {
+    color: #f78206;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.status-pending::before {
+    content: "◎";
+    color: #f78206;
+}
+
+.option-button {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    line-height: 0.5;
+}
+  
+.link-style {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+a:focus {
+    color: red;
+}
+ 
+.bottom-button {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #000;
+    text-align: center;  
+    overflow: hidden; 
+    float: left;
+    margin: 5px;
+}
+
+.big-price {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
