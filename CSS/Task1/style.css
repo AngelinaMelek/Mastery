@@ -5,26 +5,29 @@ html {
 
 @font-face {
   font-family: 'Roboto Flex';
-  src: url('./fonts/RobotoFlex/RobotoFlex-Regular.ttf') format('ttf');
+  src: url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff2') format('woff2'),
+       url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('./fonts/OpenSans/OpenSans-Light.ttf') format('ttf');
+  src: url('fonts/OpenSans/open-sans-v29-latin-regular.woff2') format('woff2'),
+       url('fonts/OpenSans/open-sans-v29-latin-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Dancing Script';
-  src: url('./fonts/DancingScript/DancingScript-Regular.ttf') format('ttf');
+  src: url('fonts/DancingScript/dancing-script-v23-latin-regular.woff2') format('woff2'),
+       url('fonts/DancingScript/dancing-script-v23-latin-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-h1 {
+.main-title {
   font-size: 90px;
   text-align:center;
   font-family: "Roboto Flex", arial, sans-serif;
