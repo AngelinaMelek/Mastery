@@ -1,6 +1,7 @@
 html {
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 20px;
+  text-align: justify;
 }
 
 @font-face {
@@ -27,20 +28,38 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Antonio';
+  src: url('fonts/Antonio/antonio-v9-latin-regular.woff2') format('woff2'),
+       url('fonts/Antonio/antonio-v9-latin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .main-title {
   font-size: 90px;
   text-align:center;
-  font-family: "Roboto Flex", arial, sans-serif;
+  font-family: "Roboto Flex", Arial, sans-serif;
   margin: 10px;
+}
+
+.title {
+  text-align: left;
+  margin: 10px;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-size: 32px;
 }
 
 p {  
-  text-align: justify;
   margin: 10px;
 }
 
-figcaption {
-  font-family: "Roboto Flex", arial, sans-serif;
+.chat {
+  font-family: 'Antonio', sans-serif;
+}
+
+.caption {
+  font-family: "Roboto Flex", Arial, sans-serif;
   text-align: left;
   font-size: 15px;
 }
@@ -55,14 +74,10 @@ p.title {
   text-align: center;
 }
 
-p.h{
+.second-title{
   text-align:center;
-  font-family: "Roboto Flex", arial, sans-serif;
-  font-size: 32px;
-}
-
-ul{
-  text-align: justify;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-size: 28px;
 }
 
 .box {
@@ -77,12 +92,104 @@ ul{
 .box :nth-child(4) { order: 2; }
 .box :nth-child(5) { order: 5; }
 
-mrow {
+.formula {
   font-family: 'Dancing Script', cursive;
   margin: 10px;
+  font-weight: bold;
+}
+
+.mrow-position {
+  padding-left: 100px;
 }
 
 math {
   display: flex;
   flex-direction: column;
+  line-height: 0.3;
+}
+
+.box-width {
+  width: 50%;
+}
+
+.box-position {
+  padding-top: 47px;
+}
+
+.text-wrapper {
+  width: 33.33%;
+}
+
+.marking-list {
+  list-style-type: square;
+  padding-left: 30px;
+}
+
+li::marker {
+  color: #fd56a1;
+  font-size: 1.2em;
+}
+
+.left-wrapper {
+  width: 70%;
+}
+
+.right-wrapper {
+  width: 30%;
+}
+
+.first-paragraph::first-letter {
+  background-color: black;
+  color: red;
+  font-weight: bold;
+  font-size: 36px;
+  float: left;
+  padding: 0 13px;
+  margin-right: 10px;
+}
+
+.additional-style {
+  background-color: black;
+  color: white;
+  text-align: left;
+  border-right: 15px solid #fd56a1;
+  position:relative;
+  left: 10px;
+  font-family: 'Antonio', sans-serif;
+  padding-bottom: 1px;
+}
+
+.additional-title {
+  padding-left: 35px;
+  font-size: 35px;
+  background-color: #fd56a1;
+  color: white;
+  position: absolute;
+  right: 0;
+  width: 350px;
+  height: 50px;
+  box-shadow: 
+  rgba(0, 0, 0, 0.4) 5px 5px,
+  rgba(0, 0, 0, 0.4) 10px 10px,
+  rgba(0, 0, 0, 0.4) 15px 15px;
+}
+
+.additional-content {
+  padding-top: 120px;
+}
+
+.additional-list {
+  padding-bottom: 10px;
+}
+
+.link-style {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+} 
+
+a:focus {
+  color: red;
 }

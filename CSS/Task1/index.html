@@ -8,17 +8,17 @@
 </head>
 <body>
 <article>
-    <h1 class="main-title">USING HASKELL WITH 5- TO 7-YEAR-OLDS</h1>
-        
-            <p class="h"> 
+    <h1 class="main-title">USING HASKELL WITH 5- TO 7-YEAR-OLDS</h1>        
+            <p class="second-title"> 
                 Ian Benson and Jenny Cane show how Haskell helps learners to reason symbolically with 
                 Cuisenaire-Gattegno Mathematics: a proven approach to teaching algebra before arithmetic
             </p>
 <div class="wrapper">  
-       <div style="width: 33.33%;">
+       <div class="text-wrapper">
             <article>                   
-                <p>
-                    At Bursted Wood Primary School, children in key stage 1 had already embarked on a secure mathematical journey, 
+                <p class="first-paragraph">
+                    At Bursted Wood Primary School, children in key stage 1 had already
+                    embarked on a secure mathematical journey, 
                     putting algebra at the heart of the curriculum. The demands of the 2014 National Curriculum meant that in Year 1 
                     children were expected to be taught to use all four arithmetic operations, and fractions, 
                     as operators. As a result, Bursted Wood adopted a series of textbooks written by Caleb Gattegno called <i>Numbers in Colours</i>. 
@@ -30,29 +30,31 @@
                 <figure>
                     <img src="img/chart.png" alt="The ten Cuisenaire rods arranged in order 
                     as a staircase with step size White." width="300" height="300">
-                    <figcaption>The ten Cuisenaire rods arranged in order as a staircase with step size White.</figcaption>
+                    <figcaption class="caption">
+                        <ul class="marking-list">
+                            <li>
+                                The ten Cuisenaire rods arranged in order as a staircase with step size White.
+                            </li>
+                        </ul>
+                    </figcaption>
                 </figure>
             </article>
         </div>
-        <div style="width: 33.33%;">
+        <div class="text-wrapper">
             <article>            
                 <p>
                     equations using plus, minus, multiply, and fractions as operators, and translate these into arithmetic. The results had been 
                     impressive throughout key stage 1. In Year 2 we wanted to take it a step further by running computing lessons using the 
                     same use of natural language and level of sophistication.
                 </p>
-            </article>
-         
-        
+            </article>        
             <article>
-                <h2>Why Haskell?</h2>
-        
+                <h2 class="title">Why Haskell?</h2>        
                 <p>
                     Haskell is closely aligned to conceptual mathematics and number theory, the inspiration for Gattegno Mathematics. It has 
                     four attributes that make it particularly appropriate for mathematics education:
-                </p>
-        
-                <ul>
+                </p>        
+                <ul class="marking-list">
                     <li>Its syntax is very close to traditional mathematical notation (but beware that it can be too terse).</li>
                     <li>Variables are statically typed, which means that programmers are protected 
                     by the compiler from passing invalid information as an argument (input) or output value.</li>
@@ -61,13 +63,13 @@
                     <li>Information is passed from the arguments to functions by pattern matching. This 
                     is an intuitive way for programmers to envisage and reason about the behaviour of their programs.</li>
                 </ul>
-            </article>
-        
-         </div>
-         <div style="width: 33.33%;">
+            </article>        
+        </div>
+        <div class="text-wrapper">
         <article>
+            <p class="formula"> 19.&emsp;&emsp;&emsp;&emsp; Are the following true</p>
                 <math>
-                    <mrow>
+                    <mrow class="formula mrow-position" >
                         <mi>o</mi>
                         <mo>=</mo>
                         <mi>I0w</mi>
@@ -78,7 +80,7 @@
                         <mn>2</mn>
                         <mi>y</mi>
                     </mrow>
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>B</mi>
                         <mo>=</mo>
                         <mn>9</mn>
@@ -87,7 +89,7 @@
                         <mn>3</mn>
                         <mi>g</mi>
                     </mrow>
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>t</mi>
                         <mo>=</mo>
                         <mn>4</mn>
@@ -99,13 +101,13 @@
                         <mn>8</mn>
                         <mi>w</mi>
                     </mrow> 
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>b</mi>
                         <mo>=</mo>
                         <mn>7</mn>
                         <mi>w</mi>
                     </mrow>            
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>d</mi>
                         <mo>=</mo>
                         <mn>6</mn>
@@ -117,13 +119,13 @@
                         <mn>2</mn>
                         <mi>g</mi>
                     </mrow>            
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>y</mi>
                         <mo>=</mo>
                         <mn>5</mn>
                         <mi>w</mi>
                     </mrow>
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>p</mi>
                         <mo>=</mo>
                         <mn>4</mn>
@@ -132,29 +134,28 @@
                         <mn>2</mn>
                         <mi> r</mi>
                     </mrow>
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>g</mi>
                         <mo>=</mo>
                         <mn>3</mn>
                         <mi> w</mi>
                     </mrow>
-                    <mrow>
+                    <mrow class="formula mrow-position">
                         <mi>r</mi>
                         <mo>=</mo>
                         <mn>2</mn>
                         <mi>w</mi>
                     </mrow>
                 </math>
-        
-                <p>
-                    Equivalent expressions using Gattegno's rod codes to represent the relationship between a rod and equivalent trains 
-                    of one colour
-                </p>
-            </article>    
-        
+                <ul class=" caption marking-list">
+                    <li>
+                        Equivalent expressions using Gattegno's rod codes to represent the relationship between a rod and equivalent trains 
+                        of one colour
+                    </li>
+                </ul>
+            </article>  
             <article>
-                <h2>Starting with a staircase</h2>
-                    
+                <h2 class="title">Starting with a staircase</h2>    
                 <p>
                     To start, we went back to a familiar pattern that Gattegno introduces in the textbooks, called a staircase. This is built 
                     from one rod of each colour arranged in size order (figure 1). The children were able to physically build the staircase. 
@@ -165,10 +166,9 @@
                     to ask each other questions such as succ White (answer Red) or pred Orange (answer Blue). To help the children access 
                     the new programming vocabulary, one child 
                 </p>
-            </article>
-             
+            </article>   
         </div>  
-    <div style="width: 70%;">
+    <div class="left-wrapper">
         <article>     
             <p>
                 <code>data Colour = NaC | Red | Purple | DarkGreen | Brown | Orange deriving (Show, Ord, Eq, Enum) </code>
@@ -182,13 +182,16 @@
                 <br>t = 8*w
                 <br>n = 9*w
                 <br>o = 10*w   
-                <p> A rod arithmetic calculator built after studying the staircase step size White, and its conjugate with 
-                    every other rod removed
-                </p>       
+                <ul class="caption marking-list">
+                    <li>
+                        A rod arithmetic calculator built after studying the staircase step size White, and its conjugate with 
+                        every other rod removed
+                    </li>
+                </ul>    
             </p> 
         </article>    
         <div class="box">
-            <article style="width: 50%">            
+            <article class="box-width">            
                 <p>
                     would take the role of the 'engine' and the other 'interpreter'. This was extended to 
                     <code>succ $ succ</code> (successor of successor) which uses function composition $. Some children 
@@ -197,22 +200,20 @@
                     The language soon became a natural part of lessons and meant that it was easy to progress to the next step. 
                 </p>
             </article>  
-        
             <figure>
                 <blockquote>
                     <p class="title">SOME CHILDREN COULD CREATIVELY ENJOY INVENTING FUNCTIONS</p>
                 </blockquote>
             </figure>
-                
-               <article style="width: 50%">  
-                <h2>Programming</h2>   
+               <article class="box-width">  
+                <h2  class="title">Programming</h2>   
                     <p>
                         Very soon the children were able to construct their own rod calculator in Haskell, by first constructing the engine 
                         using the <code>Colour</code> data type. Then the children asked the same role-play questions, this time by typing the 
                         language into the interpreter window. It soon became apparent that errors in the engine meant that the interpreter would not 
                     </p>
                </article>
-               <article style="width: 50%">
+               <article class="box-width">
                     <p>
                         run, and that this would require carefully debugging and retyping. The children could spot bugs in the engine because 
                         they had already worked out the answer. The staircase was a familiar pattern, so they could predict what the output should be. 
@@ -221,7 +222,7 @@
                         with the
                     </p>
                 </article>
-                <article style="width: 50%">
+                <article class="box-width box-position">
                     <p>   
                         number names for the rods, measured with White rather than the colour names. He becomes aware as he is speaking 
                         that the version of the succ function that works for a staircase with a step size White is distinct from the version of 
@@ -230,11 +231,13 @@
                     </p>
                </article>
         </div>
-        
         <article>   
-            <p>Transcript of a conversation about program behaviour</p>
-    
-            <p>13:08 Q: So what are you doing? Are you doing |succ| or the other one? 
+            <ul class="caption marking-list">
+                <li>
+                    Transcript of a conversation about program behaviour
+                </li>
+            </ul>       
+            <p class="chat">13:08 Q: So what are you doing? Are you doing |succ| or the other one? 
                 <br>19:08 A: I am doing |succ| <br> 21:11 Q: What does that mean?
                 <br>24:03 A: It means that if I do |succ|, you add one number on ... If I had six and I did |succ| it equals (pause for reflection) 7
                 <br>37:00 Q: You're right. So you do it... <br>40:07 A: (speakers ober Q) Actually 8 because there are no odd.
@@ -242,23 +245,22 @@
             </p>
         </article>    
     </div>
-    <div style="width: 30%;">
+    <div class="right-wrapper">
+        <article class="additional-style">
+            <h3 class="additional-title"> WHERE TO GO NEXT </h3>
+            <p class="additional-content">Many Cuisenaire and Gattegno resources can be found online:
+            </p> 
+                <ul class="marking-list">
+                    <li class="additional-list">New developments in arithmetic teaching in Britain: introducing the concept of 'set' 
+                        <a class="link-style" href="http://helloworld.cc/2pYFgOw">helloworld.cc/2pYFgOw</a> </li>
+                    <li class="additional-list">The common sense of teaching mathematics: <a class="link-style" href="http://helloworld.cc/2p9dyKO">helloworld.cc/2p9dyKO</a></li>
+                    <li class="additional-list">Gattegno Mathematics, Book 1: <a class="link-style" href="http://helloworld.cc/2qz7xZe">helloworld.cc/2qz7xZe</a></li>
+                    <li class="additional-list">Virtual Rods: <a class="link-style" href="http://helloworld.cc/2pI8ctc">helloworld.cc/2pI8ctc</a></li>
+                    <li class="additional-list">Sample code for these exercises: <a class="link-style" href="http://helloworld.cc/2pFyx9j">helloworld.cc/2pFyx9j</a></li>
+                </ul> 
+        </article> 
         <article>
-            <p> WHERE TO GO NEXT <br> Many Cuisenaire and Gattegno resources can be found online:
-                <ul>
-                    <li>New developments in arithmetic teaching in Britain: introducing the concept of 'set' 
-                        <a href="http://helloworld.cc/2pYFgOw">helloworld.cc/2pYFgOw</a> </li>
-                    <li>The common sense of teaching mathematics: <a href="http://helloworld.cc/2p9dyKO">helloworld.cc/2p9dyKO</a></li>
-                    <li>Gattegno Mathematics, Book 1: <a href="http://helloworld.cc/2qz7xZe">helloworld.cc/2qz7xZe</a></li>
-                    <li>Virtual Rods: <a href="http://helloworld.cc/2pI8ctc">helloworld.cc/2pI8ctc</a></li>
-                    <li>Sample code for these exercises: <a href="http://helloworld.cc/2pFyx9j">helloworld.cc/2pFyx9j</a></li>
-                </ul>
-            </p>  
-        </article>
-        
-        <article>
-            <h2>Calculating</h2>
-            
+            <h2 class="title">Calculating</h2>
             <p>
                 To build the rod arithmetic calculator, the pupil reuses the equations that they studied in Year 1. Gattegno's definitions 
                 lie in the algebraic domain. Programming illustrates the distinction between algebra and arithmetic. Making this clear is 
