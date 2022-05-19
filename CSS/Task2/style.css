@@ -1,12 +1,12 @@
 html {
-    font-family: 'Poppins', arial, sans-serif;
+    font-family: 'Inter', arial, sans-serif;
     font-size: 14px;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins/poppins-v20-latin-regular.woff2') format('woff2'),
-         url('fonts/Poppins/poppins-v20-latin-regular.woff') format('woff');
+    font-family: 'Inter';
+    src: url('fonts/Inter/inter-v11-latin-regular.woff2') format('woff2'),
+         url('fonts/Inter/inter-v11-latin-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,9 +22,10 @@ html {
 .td-spacing {
     letter-spacing: 1px;
     text-align: left;
+    padding: 5px 0;
 }
 
-.td-bold{
+.td-bold {
     letter-spacing: 1px;
     text-align: left;
     font-weight: bold;
@@ -34,27 +35,37 @@ html {
     width: 100%;
     border-collapse: collapse;   
 }
-  
-.status-done {
-    color: #01f472;
+ 
+.status {
     letter-spacing: 1px;
     text-align: left;
 }
-
-.status-done::before {
-    content: "◎";
-    color: #01f472;
+.status-done {
+    color: #17E383;  
 }
 
 .status-pending {
-    color: #f78206;
-    letter-spacing: 1px;
-    text-align: left;
+    color: #FF9548;
+}
+
+.status-done::before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    margin-right: 5px;
+    border: 3px solid #17E383;
 }
 
 .status-pending::before {
-    content: "◎";
-    color: #f78206;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    margin-right: 5px;
+    border: 3px solid #FF9548;
 }
 
 .option-button {
@@ -102,4 +113,9 @@ a:focus {
 .big-price {
     font-size: 18px;
     letter-spacing: 1px;
+}
+
+.checkbox-size {
+    width: 14 px;
+    height: 14px;
 }
