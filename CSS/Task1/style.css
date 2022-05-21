@@ -70,10 +70,6 @@ p {
     width: 100%;
 }
 
-p.title {
-  text-align: center;
-}
-
 .second-title{
   text-align:center;
   font-family: "Roboto Flex", Arial, sans-serif;
@@ -157,6 +153,7 @@ li::marker {
   left: 10px;
   font-family: 'Antonio', sans-serif;
   padding-bottom: 1px;
+  box-sizing: border-box;
 }
 
 .additional-title {
@@ -167,11 +164,17 @@ li::marker {
   position: absolute;
   right: 0;
   width: 350px;
-  height: 50px;
-  box-shadow: 
-  rgba(0, 0, 0, 0.4) 5px 5px,
-  rgba(0, 0, 0, 0.4) 10px 10px,
-  rgba(0, 0, 0, 0.4) 15px 15px;
+  height: 50px; 
+}
+
+/* Why is it not working? */
+.additional-style::before {
+  content: "'";
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: blueviolet;
+  box-shadow: 20px 20px 2px 1px rgba(220, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .additional-content {
@@ -192,4 +195,27 @@ li::marker {
 
 a:focus {
   color: red;
+}
+
+.note {
+  text-align: left;
+  margin: 10px;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-size: 32px;
+}
+
+.note::before {
+  position: relative;
+  content: '"';
+  color: white;
+  height: 30px;
+  width: 30px;
+  background-color: black;
+}
+
+/* I have problems with this also */
+.note::after {
+  position: absolute;
+  content: "'";
+  background-color: #fd56a1;
 }
