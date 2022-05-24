@@ -1,0 +1,265 @@
+html {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    width: 1366px;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff2') format('woff2'),
+            url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.link-style {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    color: #00856F;
+    font-size: 16px;
+} 
+
+a:focus {
+    color: black;
+    outline: auto;
+}
+
+.nav-style {
+    background-color: #DCE9E2;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+}
+
+.title-container { 
+    margin: 0;
+    display:flex;
+    flex-wrap: wrap; 
+    width: 1366px;
+    height: 678px;
+    background-color: #DCE9E2;
+    background-image: url(img/woman.png);
+    background-position: 780px 76px;
+    background-size: 420px 547px;
+    background-repeat: no-repeat;
+}
+
+.whatsApp-button {
+    background-color: #00856F;
+    width: 263px;
+    height: 52px;
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 16px 32px 16px 55px;
+    background-image: url(img/WhatsApp.svg);
+    background-repeat: no-repeat;
+    background-position: 29px 17px;
+    background-size: 14px;
+    color: #FFFFFF;
+}
+
+.whatsApp-button:hover {
+    background-color: #DCE9E2;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 24px;
+    color: #212529;
+    width: 605px;
+    height: 136px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #212529;
+}
+
+h3 {
+    font-size: 24px;
+    text-align: center;
+    color: #212529;
+}
+
+.Os-medicos {
+    font-size: 18px;
+    margin-bottom: 32px;
+    color: #495057;
+    width: 585px;
+    height: 54px;
+}
+
+.BOAS-VINDAS {
+    font-size: 14px;
+    margin-bottom: 16px;
+    margin-top: 152px;
+    color: #00856F;
+}
+
+.introducing {
+    width: 605px;
+    margin-left: 123px;
+}
+
+.users-container {
+    position: absolute;
+    display: flex; 
+    justify-content: center;
+    background-color: #FFFAF1;    
+    text-align: center;
+    color: #212529;
+    width: 1120px;
+    height: 210px;
+    margin: 0 123px;
+    top: 571px;
+}
+
+.quantity-container {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    list-style: none;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.quantity {
+    border-right: 1px solid #00856F;
+    padding: 0 100px; 
+}
+
+.quantity-plus-ten {
+    border: none;
+    padding: 0 100px;
+}
+
+.quantity-description {
+    height: 24px;
+    font-size: 16px;
+    color: #00856F;
+}
+
+.help-container {
+    background-color: #F7F9F9;
+    text-align: center;
+    width: 1366px;
+    height: 1082px;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: left;
+    list-style: none;
+}
+
+.reviews-box {
+    background-color: #FFFFFF;
+    border: 1px solid #DCE9E2;
+    border-radius: 6px;
+    margin: 40px;
+    width: 347px;
+    height: 207px;
+    /* padding: 24px; */
+    text-align: left;
+    font-size: 14px;
+}
+
+.link-servicos {
+    font-size: 14px; 
+    margin: 263px 646px 16px 646px;
+}
+
+.como-podemos {
+    margin: 16px 435px 64px;
+    width: 497px;
+    height: 104px;
+}
+
+.article-container {
+    background-color: #FFFAF1;
+    width: 1366px;
+    height: 734px;
+}
+
+.float-img {
+    float:left;
+    margin: 160px 67px 160px 123px;
+}
+
+.link-sobre-nos {
+    margin-top: 203px;
+}
+
+.entenda {
+    margin: 10px 249px 24px 67px;
+}
+
+.amet {
+    margin: 24px 123px 204px 67px;
+    line-height: 150%;
+}
+
+.contacts-container {
+    background-color: #FFFFFF;
+    width: 1366px;
+    height: 699px;
+}
+
+.float-img-right {
+    float: right;
+    margin: 160px 123px 160px 141px;
+}
+.contacts {
+    margin: 198px 839px 197px 123px;
+}
+
+.entre {
+    margin-bottom: 40px; 
+}
+
+.adress {
+    margin-bottom: 16px;
+    color: #495057;
+}
+
+.email {
+    margin-bottom: 40px;
+    color: #495057;
+}
+
+.footer-container {
+    background-color: #00856F;
+    width: 1366px;
+    height: 268px;
+}
+
+.logo-container {
+    width: max-content;
+    float: left;
+}
+.logo {
+    margin: 80px 987px 24px 123px;
+}
+
+.logo-info {
+    margin-bottom: 15px;
+    margin-left: 123px;
+    color: #FFFAF1;
+}
+
+.todos {
+    margin-bottom: 80px;
+    margin-left: 123px;
+    color: #FFFAF1;
+}
+
+
+
+
+
