@@ -5,62 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">    
+    <link rel="stylesheet" type="text/css" href="normalize.css"> 
     <title>Landing</title>
 </head>
 <body>
-    <nav class="nav-style">
-        <a class="link-style" href="#">DoctorCare</a>
-        <a class="link-style" href="#">Início</a>
-        <a class="link-style" href="#">Sobre</a>
-        <a class="link-style" href="#">Serviços</a>
-        <a class="link-style" href="#">Depoimentos</a>
-        <a class="link-style" href="#">Agendar consulta</a>
+    <nav class="nav">
+        <a class="link-style doctor-care" href="#"><img src="img/Logo1.svg" alt="DoctorCare"></a>
+        <div class="nav-box">
+            <a class="link-style nav-link" href="#">Início</a>
+            <a class="link-style nav-link" href="#">Sobre</a>
+            <a class="link-style nav-link" href="#">Serviços</a>
+            <a class="link-style nav-link" href="#">Depoimentos</a>
+        </div>
+        <button class="agendar-button">AGENDAR CONSULTA</a>
     </nav>
     <div class="title-container">
         <div class="introducing">
             <p class="BOAS-VINDAS">BOAS-VINDAS A DOCTORCARE 👋</p>
-            <h1>Assistência médica simplificada para todos</h1>
+            <h1 class="h1">Assistência médica simplificada para todos</h1>
             <p class="Os-medicos"> 
                 Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar 
                 uma cura a longo prazo.
             </p>
-            <button class="whatsApp-button" type="button">AGENDE SUA CONSULTA</button>
+            <button class="whatsApp-button" type="button"><img class="img-whatsApp" src="img/WhatsApp.svg" alt="WhatsApp">AGENDE SUA CONSULTA</button>
         </div>
     </div>
     <div class="users-container">
         <ul class="quantity-container">
-            <li class="quantity">+3.500 <br><span class="quantity-description">Pacientes atendidos</span></li>
-            <li class="quantity">+15<br><span class="quantity-description">Especialistas disponíveis</span></li>
-            <li class="quantity-plus-ten">+10<br><span class="quantity-description">Anos no mercado</span></li>         
+            <li class="quantity"><span>+3.500</span> <span class="quantity-description">Pacientes atendidos</span></li>
+            <li class="quantity"><span>+15</span><span class="quantity-description">Especialistas disponíveis</span></li>
+            <li class="quantity"><span>+10</span><span class="quantity-description">Anos no mercado</span></li>         
         </ul>
     </div>
     <div class="help-container">
         <a class="link-style link-servicos" href="#">SERVIÇOS</a>
-        <h2 class="como-podemos">Como podemos ajudá-lo a se sentir melhor?</h2>
+        <h2 class="h2 como-podemos">Como podemos ajudá-lo a se sentir melhor?</h2>
         <ul class="reviews">
             <li class="reviews-box">
-                <h3>Problemas digestivos</h3>
+                <img src="img/Check.svg" alt="Check sign">
+                <h3 class="h3">Problemas digestivos</h3>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
             </li> 
             <li class="reviews-box">
-                <h3>Saúde Hormonal</h3>
+                <img src="img/Check.svg" alt="Check sign">
+                <h3 class="h3">Saúde Hormonal</h3>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
             </li>
             <li class="reviews-box">
-                <h3>Bem-estar mental</h3>
+                <img src="img/Check.svg" alt="Check sign">
+                <h3 class="h3">Bem-estar mental</h3>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
             </li>
             <li class="reviews-box">
-                <h3>Cuidados Pediátricos</h3>
+                <img src="img/Check.svg" alt="Check sign">
+                <h3 class="h3">Cuidados Pediátricos</h3>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
                 
             </li>
             <li class="reviews-box">
-                <h3>Autoimune e Inflamação</h3>
+                <img src="img/Check.svg" alt="Check sign">
+                <h3 class="h3">Autoimune e Inflamação</h3>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
             </li>
             <li class="reviews-box">
-                <h3>Saúde do Coração</h3>                
+                <img src="img/Check.svg" alt="Check sign">
+                <h3 class="h3">Saúde do Coração</h3>                
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
             </li>
         </ul>
@@ -69,7 +78,7 @@
         <img  class="float-img" src="img/doctor.jpg" alt="Happy doctor holding a clipboard with patients">
         <a class="link-style link-sobre-nos" href="#">SOBRE NÓS</a>
         <article>            
-            <h2 class="entenda">Entenda quem somos e por que existimos</h2>
+            <h2 class="h2" class="entenda">Entenda quem somos e por que existimos</h2>
             <p class="amet">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis 
                 enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat 
                 duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia 
@@ -79,13 +88,17 @@
         </article>
     </div>
     <div class="contacts-container">
-        <img class="float-img-right" src="img/man.jpg" alt="Man sitting and looking at his phone">
-           <div class="contacts">
-                <h2 class="entre">Entre em contato com a gente!</h2>
-                <p class="adress">R. Amauri Souza, 346</p>
-                <p class="email">contato@doctorcare.com</p>
-                <button class="whatsApp-button" type="button">AGENDE SUA CONSULTA</button>
-           </div >
+        <div class="contacts">
+            <h2 class="h2" class="entre">Entre em contato com a gente!</h2>
+            <address>
+                <p class="adress"> <img class="img-contact" src="img/pin.svg" alt="Pin sign">R. Amauri Souza, 346</p>
+                <a class="link-style email" href="mailto:contato@doctorcare.com"><img class="img-contact" src="img/mail.svg" alt="Letter image">contato@doctorcare.com</a><br>
+              </address>
+            <button class="whatsApp-button" type="button"><img class="img-whatsApp" src="img/WhatsApp.svg" alt="WhatsApp">AGENDE SUA CONSULTA</button>
+        </div>
+        <div class="wrapper">
+            <img src="img/man.jpg" alt="Man sitting and looking at his phone">
+            </div>
     </div>
     <footer class="footer-container">
         <div class="logo-container">
@@ -93,9 +106,11 @@
             <p class="logo-info">©2022 - DoctorCare.</p>
             <p class="todos">Todos os direitos reservados.</p>
         </div>
-        <img src="img/Instagram.svg" alt="Instagram">
-        <img src="img/Facebook.svg" alt="Facebook">
-        <img src="img/YouTube.svg" alt="YouTube">
+       <div>
+            <img class="social" src="img/Instagram.svg" alt="Instagram">
+            <img class="social" src="img/Facebook.svg" alt="Facebook">
+            <img class="social" src="img/YouTube.svg" alt="YouTube">
+       </div>
     </footer>
 </body>
 </html>

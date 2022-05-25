@@ -6,10 +6,14 @@ html {
     width: 1366px;
 }
 
+html { box-sizing: border-box; } 
+
+*, *:before, *:after { box-sizing: inherit; }
+
 @font-face {
     font-family: 'DM Sans';
-    src: url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff2') format('woff2'),
-            url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff') format('woff');
+    src: url('fonts/dm-sans-v11-latin-regular.woff2') format('woff2'),
+            url('fonts/dm-sans-v11-latin-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,11 +31,45 @@ a:focus {
     outline: auto;
 }
 
-.nav-style {
+.nav {
+    display: flex;
+    justify-content: space-between;
     background-color: #DCE9E2;
     position: fixed;
-    overflow: auto;
-    width: 100%;
+    width: 1366px;
+    height: 72px;
+}
+
+.nav-box {
+    margin: 25px 0 26px;
+}
+
+.nav-link {
+    margin-right: 32px;
+}
+
+.nav-link:first-child {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #00856F;
+}
+
+.doctor-care {
+    margin: 27px 0 27px 125px;
+}
+
+.agendar-button {
+    background-color: #DCE9E2; 
+    width: 190px;
+    height: 38px;
+    border: 1px solid #00856F;
+    border-radius: 40px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #00856F;
+    margin: 15px 119px 26px 0;
+    
 }
 
 .title-container { 
@@ -48,16 +86,13 @@ a:focus {
 }
 
 .whatsApp-button {
+    display:inline-flex;
     background-color: #00856F;
     width: 263px;
     height: 52px;
     border-radius: 40px;
     font-size: 14px;
-    padding: 16px 32px 16px 55px;
-    background-image: url(img/WhatsApp.svg);
-    background-repeat: no-repeat;
-    background-position: 29px 17px;
-    background-size: 14px;
+    padding: 16px 32px 16px 0;
     color: #FFFFFF;
 }
 
@@ -65,7 +100,12 @@ a:focus {
     background-color: #DCE9E2;
 }
 
-h1 {
+.img-whatsApp {
+    margin-right: 18px;
+    margin-left: 33px;
+}
+
+.h1 {
     font-size: 52px;
     margin-bottom: 24px;
     color: #212529;
@@ -73,15 +113,15 @@ h1 {
     height: 136px;
 }
 
-h2 {
+.h2 {
     font-size: 40px;
     font-weight: bold;
     color: #212529;
 }
 
-h3 {
+.h3 {
     font-size: 24px;
-    text-align: center;
+    /* text-align: center; */
     color: #212529;
 }
 
@@ -125,20 +165,20 @@ h3 {
     list-style: none;
     font-weight: bold;
     font-size: 48px;
+    padding: 20px;
 }
 
 .quantity {
-    border-right: 1px solid #00856F;
+    display: flex;
+    flex-direction: column;
     padding: 0 100px; 
 }
 
-.quantity-plus-ten {
-    border: none;
-    padding: 0 100px;
+.quantity:not(:last-child) {
+    border-right: 1px solid #00856F;
 }
 
 .quantity-description {
-    height: 24px;
     font-size: 16px;
     color: #00856F;
 }
@@ -156,18 +196,24 @@ h3 {
     flex-wrap: wrap;
     align-items: left;
     list-style: none;
+    padding-left: 123px;
 }
 
 .reviews-box {
     background-color: #FFFFFF;
     border: 1px solid #DCE9E2;
     border-radius: 6px;
-    margin: 40px;
+    margin: 20px;
     width: 347px;
     height: 207px;
-    /* padding: 24px; */
+    padding: 24px;
+    box-sizing:border-box;
     text-align: left;
     font-size: 14px;
+}
+
+.reviews-box:hover {
+    transform: scale(1.1);
 }
 
 .link-servicos {
@@ -176,7 +222,7 @@ h3 {
 }
 
 .como-podemos {
-    margin: 16px 435px 64px;
+    margin: 16px 434px 44px;
     width: 497px;
     height: 104px;
 }
@@ -206,21 +252,26 @@ h3 {
 }
 
 .contacts-container {
+    display: flex;
     background-color: #FFFFFF;
     width: 1366px;
     height: 699px;
+    padding: 160px 123px;
 }
 
-.float-img-right {
-    float: right;
-    margin: 160px 123px 160px 141px;
+.wrapper {
+    width: 575px;
+    height: 379px;
 }
+
 .contacts {
-    margin: 198px 839px 197px 123px;
+    padding-right: 141px;
 }
 
 .entre {
     margin-bottom: 40px; 
+    width: 404px;
+    height: 104px;
 }
 
 .adress {
@@ -233,30 +284,35 @@ h3 {
     color: #495057;
 }
 
+.img-contact {
+    margin-right: 17px;
+}
+
 .footer-container {
+    display: flex;
+    justify-content: space-between;
     background-color: #00856F;
     width: 1366px;
     height: 268px;
+    padding: 80px 123px;
 }
 
-.logo-container {
-    width: max-content;
-    float: left;
-}
 .logo {
-    margin: 80px 987px 24px 123px;
+    margin-bottom: 24px;
 }
 
 .logo-info {
     margin-bottom: 15px;
-    margin-left: 123px;
     color: #FFFAF1;
 }
 
 .todos {
     margin-bottom: 80px;
-    margin-left: 123px;
     color: #FFFAF1;
+}
+
+.social {
+    margin: 42px 20px;
 }
 
 
