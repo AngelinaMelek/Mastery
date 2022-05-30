@@ -58,7 +58,7 @@ a:focus {
     margin-right: 32px;
 }
 
-.nav-link:focus{
+.nav-link--active{
     border-bottom: 2px solid var(--main-color);
     font-weight: bold;
     color: var(--main-color);
@@ -306,6 +306,10 @@ a:focus {
     padding: 80px 123px;
 }
 
+.logo-container {
+    width: 370px;
+}
+
 .logo {
     margin-bottom: 24px;
 }
@@ -324,6 +328,215 @@ a:focus {
     margin: 42px 20px;
 }
 
+
+
+
+
+
+
+
+@media (max-width:375px) {
+
+html {
+    width: 375px;
+    text-align: center;
+}    
+
+.title-container {
+    width: 375px;
+    height: 1080px;
+    background-position: 57px 487.25px;
+    background-size: 261.64px 340.75px;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    width: 375px;
+    height: 72px;
+}
+
+.doctor-care {
+    margin: 27px 0 27px 125px;
+}
+
+.whatsApp-button {
+    width: 263px;
+    padding: 17px 32px 17px 0;
+}
+
+.img-whatsApp {
+    margin-right: 17px;
+    margin-left: 33px;
+}
+
+.h1 {
+    font-size: 34px;
+    width: 327px;
+    height: 132px;
+}
+
+.h2 {
+    font-size: 30px;
+    width: 314px;
+    height: 117px;
+}
+
+.Os-medicos {
+    width: 327px;
+    height: 108px;
+}
+
+.boas-vindas {
+    margin-top: 81px;
+    color: var(--main-color);
+}
+.introducing {
+    width: 327px;
+    margin-left: 24px;
+}
+
+.users-container {
+    width: 327px;
+    height: 470px;
+    margin: 0 24px;
+    top: 828px;
+}
+
+.quantity-container {
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 4px;
+}
+
+.quantity {
+    padding: 0 80px; 
+}
+
+.quantity:not(:last-child) {
+    border: 0;
+}
+
+.quantity-description {
+    margin-bottom: 60px;
+}
+
+.help-container {
+    width: 375px;
+    height: 2034px;
+}
+
+.reviews {
+    padding-left: 24px;
+}
+
+.reviews-box {
+    margin: 0 0 32px 0;
+    width: 327px;
+    padding: 24px;
+    font-size: 16px;
+}
+
+.reviews-box:hover {
+    transform: scale(1.1);
+}
+
+.amet-help {
+    width: 279px;
+    height: 72px;
+    text-align: left;
+}
+
+.link-servicos {
+    font-size: 14px; 
+    margin: 318px 150px 16px 149px;
+}
+
+.como-podemos {
+    margin: 16px 31px 60px;
+    width: 314px;
+    height: 117px;
+}
+
+.article-container {
+    width: 375px;
+    height: 969px;
+}
+
+.float-img {
+    width: 327px;
+    height: 282px;
+    margin: 60px 24px 100px 24px;
+}
+
+.link-sobre-nos {
+    margin-top: 100px;
+}
+
+.entenda {
+    margin: 16px 24px 24px;
+}
+
+.amet {
+    margin: 24px 24px 60px;
+    width: 327px;
+    height: 288px;
+    text-align: left;
+}
+
+.contacts-container {
+    width: 375px;
+    height: 735px;
+    padding: 0 24px;
+}
+
+.wrapper {
+    width: 575px;
+    height: 379px;
+}
+
+.contacts {
+    padding-right: 141px;
+}
+
+.entre {
+    padding: 100px 54px 32px 24px;
+    width: 297px;
+    height: 78px;
+    text-align: left;
+}
+
+.email {
+    margin-bottom: 32px;
+    color: #495057;
+}
+
+.img-contact {
+    margin: 60px 24px 100px;
+}
+
+.footer-container {
+    justify-content:left;
+    width: 375px;
+    height: 285px;
+    padding: 60px 113px 62px 24px;
+}
+
+.logo-info {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.todos {
+    margin-bottom: 34px;
+    text-align: left;
+}
+
+.social {
+    margin: 0 216px 62px 24px;
+    text-align: left;
+}
+
+}
 
 
 
