@@ -34,6 +34,7 @@ html {
 .table {
     width: 100%;
     border-collapse: collapse;   
+    border-radius: 30px 30px 0px 0px;
 }
  
 .status {
@@ -48,25 +49,22 @@ html {
     color: #FF9548;
 }
 
-.status-done::before {
+.status::before {
     content: "";
     display: inline-block;
     border-radius: 50%;
     height: 5px;
     width: 5px;
     margin-right: 5px;
-    border: 3px solid #17E383;
 }
 
 .status-pending::before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    height: 5px;
-    width: 5px;
-    margin-right: 5px;
     border: 3px solid #FF9548;
 }
+
+.status-done::before {
+    border: 3px solid #17E383;
+}    
 
 .option-button {
     display: flex;
