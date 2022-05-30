@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contact us</h1>
+    <p>Need an experienced and skilled hand with custom IT projects? 
+        Fill out the form to get a free consultation.</p>
+    <form>
+        <div>
+            <label for="name">Your company name<span>*</span></label>
+            <input required id="name" type="text" name="ame">
+        </div>
+        <div>
+            <label for="nature">Nature of Business<span>*</span></label>
+            <input required id="nature" type="text" name="nature">
+        </div>
+        <div>
+            <label for="date">Date of registration</label>
+            <input id="date" name="date" placeholder="DD/MM/YYYY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+        </div>
+        <div>
+            <label for="country">Country of registartion<span>*</span></label>
+            <select id="country" name="country" required>
+                <option value="Ukraine">Ukraine</option>
+                <option value="China">China</option>
+                <option value="UK">UK</option>
+            </select>
+        </div>
+        <div>
+            <label for="adress">Adress</label>
+            <input id="adress" type="text" name="adress">
+        </div>
+        <div>
+            <label for="postcode">Postcode</label>
+            <input id="postcode" type="text" pattern="[A-Z]{2}[0-9]{2}" name="postcode">
+        </div>
+        <div>
+            <label for="contactName">Contact name</label>
+            <input id="contactName" type="text" name="contactName">
+        </div>
+        <div>
+            <label for="contactPhone">Contact phone</label>
+            <input id="contactPhone" type="tel" pattern="[0-9]{3}-[0-9]{3}" name="contactPhone">
+        </div>
+        <div>
+            <label for="email">Email<span>*</span></label>
+            <input required id="email" type="email" name="email">
+        </div>
+        <div>
+            <label for="idea">Let's talk about your idea</label>
+            <textarea id="idea" name="idea" maxlength="320"></textarea>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <div>
+            <input type="file">
+            <p>File size of your documents should not exceed 10MB</p>
+            </div>
+        <section>
+            <p>
+              <button type="submit">Submit</button>
+            </p>
+        </section>
+        <div>
+            <input type="radio" id="protection" name="protection" value="I want to protect my data by signing an NDA">
+            <label for="protection">I want to protect my data by signing an NDA</label>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <input type="checkbox" id="NDA" name="NDA">
+             <label for="NDA">I want to protect my data by signing an NDA</label></li>
+                <li> 
+                    <input type="checkbox" id="terms" name="terms">
+             <label for="terms">I have read and accept the Terms and Conditions</label></li>
+            </ul>
+        </div>
+    </form>
+      
+</body>
+</html>
