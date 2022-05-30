@@ -45,13 +45,13 @@ html {
 
 .title {
   text-align: left;
-  margin: 10px;
+  margin: 20px;
   font-family: "Roboto Flex", Arial, sans-serif;
   font-size: 32px;
 }
 
 p {  
-  margin: 10px;
+  margin: 15px;
 }
 
 .chat {
@@ -105,7 +105,7 @@ math {
 }
 
 .box-width {
-  width: 50%;
+  width: 49%;
 }
 
 .box-position {
@@ -113,12 +113,14 @@ math {
 }
 
 .text-wrapper {
-  width: 33.33%;
+  width: 30%;
+  padding: 30px 20px 20px;
 }
 
 .marking-list {
   list-style-type: square;
   padding-left: 30px;
+  padding-bottom: 20px;
 }
 
 li::marker {
@@ -127,11 +129,11 @@ li::marker {
 }
 
 .left-wrapper {
-  width: 70%;
+  width: 66.5%;
 }
 
 .right-wrapper {
-  width: 30%;
+  width: 32.5%;
 }
 
 .first-paragraph::first-letter {
@@ -145,6 +147,8 @@ li::marker {
 }
 
 .additional-style {
+  margin-left: 10px;
+  padding: 0 20px;
   background-color: black;
   color: white;
   text-align: left;
@@ -154,27 +158,31 @@ li::marker {
   font-family: 'Antonio', sans-serif;
   padding-bottom: 1px;
   box-sizing: border-box;
+  
 }
 
 .additional-title {
-  padding-left: 35px;
+  padding-left: 25px;
   font-size: 35px;
   background-color: #fd56a1;
   color: white;
   position: absolute;
   right: 0;
-  width: 350px;
+  width: 100%;
   height: 50px; 
 }
 
-/* Why is it not working? */
-.additional-style::before {
-  content: "'";
+.additional-title::before {
+  content: "";
+  display: inline-block;
   position: absolute;
-  transform: rotate(45deg);
-  background-color: blueviolet;
-  box-shadow: 20px 20px 2px 1px rgba(220, 0, 0, 0.7);
-  z-index: 100;
+  left: 0;
+  bottom: -65%;
+  background-color: #262d37;
+  opacity: 0.8;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  width: 6.5%;
+  height: 65%;
 }
 
 .additional-content {
@@ -198,24 +206,53 @@ a:focus {
 }
 
 .note {
-  text-align: left;
-  margin: 10px;
+  display: flex;
+  position: relative;
   font-family: "Roboto Flex", Arial, sans-serif;
   font-size: 32px;
+  justify-content: left;
 }
 
 .note::before {
-  position: relative;
-  content: '"';
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  content: '“';
+  font-size: 55px;
   color: white;
-  height: 30px;
-  width: 30px;
+  left: -50px;
+  height: 36px;
+  width: 36px;
   background-color: black;
 }
 
-/* I have problems with this also */
 .note::after {
+  display: inline-block;
   position: absolute;
-  content: "'";
+  height: 45%;
+  width: 2%;
+  top: 36px;
+  left: -27px;
+  content: "";
   background-color: #fd56a1;
+}
+
+.border-dot-right {
+  border-right: dotted grey;
+}
+
+.border-dot-top {
+  border-top: dotted grey;
+}
+
+.border-dot-bottom {
+  border-bottom: dotted grey;
+}
+
+.border-dot-left {
+  border-left: dotted grey;
+}
+
+.story-by {
+  text-align: center;
 }
