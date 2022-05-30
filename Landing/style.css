@@ -2,7 +2,7 @@ html {
     font-family: 'DM Sans', Arial, sans-serif;
     font-size: 16px;
     text-align: left;
-    margin: 0;
+    margin: 0 auto;
     width: 1366px;
 }
 
@@ -18,11 +18,17 @@ html { box-sizing: border-box; }
     font-style: normal;
 }
 
+:root {
+    --main-color: #00856F;
+    --bg-color: #DCE9E2;
+    --text-color: #212529;
+}
+
 .link-style {
     outline: none;
     text-decoration: none;
     display: inline-block;
-    color: #00856F;
+    color: var(--main-color);
     font-size: 16px;
 } 
 
@@ -34,24 +40,28 @@ a:focus {
 .nav {
     display: flex;
     justify-content: space-between;
-    background-color: #DCE9E2;
+    background-color: var(--bg-color);
     position: fixed;
+    z-index: 100;
     width: 1366px;
     height: 72px;
 }
 
 .nav-box {
+    display: flex;
+    flex-direction: row;
     margin: 25px 0 26px;
+    list-style: none;
 }
 
 .nav-link {
     margin-right: 32px;
 }
 
-.nav-link:first-child {
-    text-decoration: underline;
+.nav-link:focus{
+    border-bottom: 2px solid var(--main-color);
     font-weight: bold;
-    color: #00856F;
+    color: var(--main-color);
 }
 
 .doctor-care {
@@ -59,17 +69,16 @@ a:focus {
 }
 
 .agendar-button {
-    background-color: #DCE9E2; 
+    background-color: var(--bg-color); 
     width: 190px;
     height: 38px;
-    border: 1px solid #00856F;
+    border: 1px solid var(--main-color);
     border-radius: 40px;
     font-size: 14px;
     text-align: center;
     font-weight: bold;
-    color: #00856F;
-    margin: 15px 119px 26px 0;
-    
+    color: var(--main-color);
+    margin: 15px 119px 26px 0;   
 }
 
 .title-container { 
@@ -78,7 +87,7 @@ a:focus {
     flex-wrap: wrap; 
     width: 1366px;
     height: 678px;
-    background-color: #DCE9E2;
+    background-color: var(--bg-color);
     background-image: url(img/woman.png);
     background-position: 780px 76px;
     background-size: 420px 547px;
@@ -87,7 +96,8 @@ a:focus {
 
 .whatsApp-button {
     display:inline-flex;
-    background-color: #00856F;
+    cursor: pointer;
+    background-color: var(--main-color);
     width: 263px;
     height: 52px;
     border-radius: 40px;
@@ -97,7 +107,7 @@ a:focus {
 }
 
 .whatsApp-button:hover {
-    background-color: #DCE9E2;
+    background-color: var(--bg-color);
 }
 
 .img-whatsApp {
@@ -108,7 +118,7 @@ a:focus {
 .h1 {
     font-size: 52px;
     margin-bottom: 24px;
-    color: #212529;
+    color: var(--text-color);
     width: 605px;
     height: 136px;
 }
@@ -116,13 +126,12 @@ a:focus {
 .h2 {
     font-size: 40px;
     font-weight: bold;
-    color: #212529;
+    color: var(--text-color);
 }
 
 .h3 {
     font-size: 24px;
-    /* text-align: center; */
-    color: #212529;
+    color: var(--text-color);
 }
 
 .Os-medicos {
@@ -133,11 +142,11 @@ a:focus {
     height: 54px;
 }
 
-.BOAS-VINDAS {
+.boas-vindas {
     font-size: 14px;
     margin-bottom: 16px;
     margin-top: 152px;
-    color: #00856F;
+    color: var(--main-color);
 }
 
 .introducing {
@@ -151,7 +160,7 @@ a:focus {
     justify-content: center;
     background-color: #FFFAF1;    
     text-align: center;
-    color: #212529;
+    color: var(--text-color);
     width: 1120px;
     height: 210px;
     margin: 0 123px;
@@ -175,12 +184,12 @@ a:focus {
 }
 
 .quantity:not(:last-child) {
-    border-right: 1px solid #00856F;
+    border-right: 1px solid var(--main-color);
 }
 
 .quantity-description {
     font-size: 16px;
-    color: #00856F;
+    color: var(--main-color);
 }
 
 .help-container {
@@ -201,7 +210,7 @@ a:focus {
 
 .reviews-box {
     background-color: #FFFFFF;
-    border: 1px solid #DCE9E2;
+    border: 1px solid var(--bg-color);
     border-radius: 6px;
     margin: 20px;
     width: 347px;
@@ -285,13 +294,13 @@ a:focus {
 }
 
 .img-contact {
-    margin-right: 17px;
+    margin-right: 10px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    background-color: #00856F;
+    background-color: var(--main-color);
     width: 1366px;
     height: 268px;
     padding: 80px 123px;
