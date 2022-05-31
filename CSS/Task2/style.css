@@ -1,0 +1,119 @@
+html {
+    font-family: 'Inter', arial, sans-serif;
+    font-size: 14px;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter/inter-v11-latin-regular.woff2') format('woff2'),
+         url('fonts/Inter/inter-v11-latin-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.thead-th {
+    color: grey;
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.td-spacing {
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.td-bold {
+    letter-spacing: 1px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;   
+    border-radius: 30px 30px 0px 0px;
+}
+ 
+.status {
+    letter-spacing: 1px;
+    text-align: left;
+}
+.status-done {
+    color: #17E383;  
+}
+
+.status-pending {
+    color: #FF9548;
+}
+
+.status::before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    margin-right: 5px;
+}
+
+.status-pending::before {
+    border: 3px solid #FF9548;
+}
+
+.status-done::before {
+    border: 3px solid #17E383;
+}    
+
+.option-button {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    line-height: 0.5;
+}
+  
+.link-style {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+a:focus {
+    color: red;
+}
+ 
+.bottom-button {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.pagination-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #000;
+    text-align: center;  
+    overflow: hidden; 
+    float: left;
+    margin: 5px;
+}
+
+.big-price {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.checkbox-size {
+    width: 14 px;
+    height: 14px;
+}
