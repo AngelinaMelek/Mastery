@@ -254,5 +254,21 @@ a:focus {
 }
 
 .story-by {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-by::before,
+.story-by::after {
+  content: "";
+  display: inline-block;
+  border-bottom: 3px dotted grey;
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+.story-by-color {
+  color: #fd56a1;
+  font-weight: bold;
 }
