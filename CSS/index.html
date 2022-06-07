@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <title>Form</title>
+</head>
+<body>
+   <div>
+        <h1>Contact us</h1>
+        <p class="title-description">Need an experienced and skilled hand with custom IT projects? 
+            Fill out the form to get a free consultation.</p>
+   </div>
+    <form>
+      <div class="company-data">
+            <div class="filing-box">
+                <label for="name" class="title">Your company name<span>*</span></label>
+                <input required id="name" type="text" name="ame" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="nature" class="title">Nature of Business<span>*</span></label>
+                <input required id="nature" type="text" name="nature" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="date" class="title">Date of registration</label>
+                <input id="date" name="date" placeholder="DD/MM/YYYY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="country" class="title">Country of registartion<span>*</span></label>
+                <select id="country" name="country" required class="field">
+                    <option value=""disabled selected hidden>Select</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="China">China</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="filing-box">
+                <label for="adress" class="title">Adress</label>
+                <input id="adress" type="text" name="adress" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="postcode" class="title">Postcode</label>
+                <input id="postcode" type="text" pattern="[A-Z]{2}[0-9]{2}" name="postcode" class="field" />
+            </div>
+       </div>
+       <div class="personal-data">
+            <div class="filing-box">
+                <label for="contactName" class="title">Contact name</label>
+                <input id="contactName" type="text" name="contactName" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="contactPhone" class="title">Contact phone</label>
+                <input id="contactPhone" type="tel" pattern="[0-9]{3}-[0-9]{3}" name="contactPhone" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="email" class="title">Email<span>*</span></label>
+                <input required id="email" type="email" name="email" class="field" />
+            </div>
+            <div class="filing-box">
+                <label for="idea" class="title">Let's talk about your idea</label>
+                <textarea id="idea" name="idea" maxlength="320" class="field big-field"></textarea>
+            </div>
+            <span class="multi-range">
+                <input type="range" min="0" max="100" value="0" id="lower" />
+                <input type="range" min="0" max="100" value="50" id="upper" />
+            </span>
+        </div>
+        <div class="agreement">
+                <label class="dashed-box">
+                    <img class="img-download" src="img/Group.svg" alt="Download sign" />
+                    <span>Upload Additional file</span>
+                    <input id="upload" class="visually-hidden download" type="file" />
+                    </label>
+                <p class="file-size">File size of your documents should not exceed 10MB</p>
+            <div>
+                  <button type="submit" class="submit-button">SUBMIT</button>
+            </div>
+            <div>                
+                <label class="agreement-check">
+                    <input type="radio" />
+                    <span class="checkmark radiomark"></span>
+                    <span class="agreement-text">I want to protect my data by signing an NDA</span>
+                </label>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <label class="agreement-check">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            <span class="agreement-text">I want to protect my data by signing an NDA</span>
+                        </label>
+                    </li>
+                    <li> 
+                        
+                        <label class="agreement-check" for="terms">
+                            <input type="checkbox" id="terms" name="terms" />
+                            <span class="checkmark"></span>
+                            <span class="agreement-text">I have read and accept the Terms and Conditions</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>    
+</body>
+</html>
