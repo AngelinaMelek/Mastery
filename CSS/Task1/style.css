@@ -1,0 +1,274 @@
+html {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff2') format('woff2'),
+       url('fonts/RobotoFlex/roboto-flex-v8-latin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans/open-sans-v29-latin-regular.woff2') format('woff2'),
+       url('fonts/OpenSans/open-sans-v29-latin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('fonts/DancingScript/dancing-script-v23-latin-regular.woff2') format('woff2'),
+       url('fonts/DancingScript/dancing-script-v23-latin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Antonio';
+  src: url('fonts/Antonio/antonio-v9-latin-regular.woff2') format('woff2'),
+       url('fonts/Antonio/antonio-v9-latin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-title {
+  font-size: 90px;
+  text-align:center;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  margin: 10px;
+}
+
+.title {
+  text-align: left;
+  margin: 20px;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-size: 32px;
+}
+
+p {  
+  margin: 15px;
+}
+
+.chat {
+  font-family: 'Antonio', sans-serif;
+}
+
+.caption {
+  font-family: "Roboto Flex", Arial, sans-serif;
+  text-align: left;
+  font-size: 15px;
+}
+
+.wrapper {
+    display:flex;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.second-title {
+  text-align: center;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-size: 28px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.box :nth-child(1) { order: 1; }
+.box :nth-child(2) { order: 3; }
+.box :nth-child(3) { order: 4; }
+.box :nth-child(4) { order: 2; }
+.box :nth-child(5) { order: 5; }
+
+.formula {
+  font-family: 'Dancing Script', cursive;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.mrow-position {
+  padding-left: 100px;
+}
+
+math {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.3;
+}
+
+.box-width {
+  width: 49%;
+}
+
+.box-position {
+  padding-top: 47px;
+}
+
+.text-wrapper {
+  width: 30%;
+  padding: 30px 20px 20px;
+}
+
+.marking-list {
+  list-style-type: square;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+li::marker {
+  color: #fd56a1;
+  font-size: 1.2em;
+}
+
+.left-wrapper {
+  width: 66.5%;
+}
+
+.right-wrapper {
+  width: 32.5%;
+}
+
+.first-paragraph::first-letter {
+  background-color: black;
+  color: red;
+  font-weight: bold;
+  font-size: 36px;
+  float: left;
+  padding: 0 13px;
+  margin-right: 10px;
+}
+
+.additional-style {
+  margin-left: 10px;
+  padding: 0 20px;
+  background-color: black;
+  color: white;
+  text-align: left;
+  border-right: 15px solid #fd56a1;
+  position:relative;
+  left: 10px;
+  font-family: 'Antonio', sans-serif;
+  padding-bottom: 1px;
+  box-sizing: border-box;
+  
+}
+
+.additional-title {
+  padding-left: 25px;
+  font-size: 35px;
+  background-color: #fd56a1;
+  color: white;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 50px; 
+}
+
+.additional-title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -65%;
+  background-color: #262d37;
+  opacity: 0.8;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  width: 6.5%;
+  height: 65%;
+}
+
+.additional-content {
+  padding-top: 120px;
+}
+
+.additional-list {
+  padding-bottom: 10px;
+}
+
+.link-style {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+} 
+
+a:focus {
+  color: red;
+}
+
+.note {
+  display: flex;
+  position: relative;
+  font-family: "Roboto Flex", Arial, sans-serif;
+  font-size: 32px;
+  justify-content: left;
+}
+
+.note::before {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  content: '“';
+  font-size: 55px;
+  color: white;
+  left: -50px;
+  height: 36px;
+  width: 36px;
+  background-color: black;
+}
+
+.note::after {
+  display: inline-block;
+  position: absolute;
+  height: 45%;
+  width: 2%;
+  top: 36px;
+  left: -27px;
+  content: "";
+  background-color: #fd56a1;
+}
+
+.border-dot-right {
+  border-right: dotted grey;
+}
+
+.border-dot-top {
+  border-top: dotted grey;
+}
+
+.border-dot-bottom {
+  border-bottom: dotted grey;
+}
+
+.border-dot-left {
+  border-left: dotted grey;
+}
+
+.story-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-by::before,
+.story-by::after {
+  content: "";
+  display: inline-block;
+  border-bottom: 3px dotted grey;
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+.story-by-color {
+  color: #fd56a1;
+  font-weight: bold;
+}
