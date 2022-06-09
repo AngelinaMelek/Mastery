@@ -45,6 +45,7 @@ a:focus {
     z-index: 100;
     width: 1366px;
     height: 72px;
+    padding-left: 123px;
 }
 
 .nav-box {
@@ -59,14 +60,15 @@ a:focus {
     margin-right: 32px;
 }
 
-.nav-link--active{
+.nav-link--active,
+.nav-link:active {
     border-bottom: 2px solid var(--main-color);
     font-weight: bold;
     color: var(--main-color);
 }
 
 .doctor-care {
-    margin: 27px 0 27px 125px;
+   padding: 27px 0 27px 2px;
 }
 
 .agendar-button {
@@ -98,6 +100,7 @@ a:focus {
     background-position: 780px 76px;
     background-size: 420px 547px;
     background-repeat: no-repeat;
+    padding-left: 123px;
 }
 
 .whatsApp-button {
@@ -133,6 +136,7 @@ h2 {
     font-size: 14px;
     font-weight: bold;
     color: var(--main-color);
+    text-transform: uppercase;
 }
 
 h3 {
@@ -157,15 +161,8 @@ h4 {
 }
 
 .boas-vindas {
-    font-size: 14px;
     margin-bottom: 16px;
     margin-top: 152px;
-    color: var(--main-color);
-}
-
-.introducing {
-    width: 605px;
-    margin-left: 123px;
 }
 
 .users-container {
@@ -259,7 +256,7 @@ h4 {
 .como-podemos {
     margin: 16px 434px 44px;
     width: 497px;
-    height: 104px;
+    text-align: center;
 }
 
 .article-container {
@@ -267,11 +264,12 @@ h4 {
     background-color: #FFFAF1;
     width: 1366px;
     height: 734px;
+    padding-left: 123px;
 }
 
 .float-img {
     float:left;
-    margin: 160px 67px 160px 123px;
+    margin: 160px 67px 160px 0;
 }
 
 .link-sobre-nos {
@@ -288,7 +286,8 @@ h4 {
 }
 
 .contacts-container {
-    display: flex;
+    display: flex;    
+    justify-content: space-between;
     background-color: #FFFFFF;
     width: 1366px;
     height: 699px;
@@ -298,10 +297,6 @@ h4 {
 .wrapper {
     width: 575px;
     height: 379px;
-}
-
-.contacts {
-    padding-right: 141px;
 }
 
 .entre {
@@ -333,10 +328,6 @@ h4 {
     width: 1366px;
     height: 268px;
     padding: 80px 123px;
-}
-
-.logo-container {
-    width: 370px;
 }
 
 .logo {
@@ -444,12 +435,12 @@ h4 {
         width: 100vw;
         height: 100vh;
         z-index: -1;
+        left: 0;
     }
 
     #burger-menu-button:checked ~ .mobile-social {
         display: flex;
         flex-direction: row;
-        margin-left: 121px;
         margin-top: 0;
         list-style: none;
         padding: 0;  
@@ -468,6 +459,7 @@ h4 {
         background-position: 57px 487.25px;
         background-size: 261.64px 340.75px;
         text-align: center;
+        padding-left: 24px;
     }
 
     .nav {
@@ -475,9 +467,9 @@ h4 {
         height: 72px;
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        padding-left: 24px;
     }
-
-
 
     .nav-wrapper {
         display:flex;
@@ -508,7 +500,7 @@ h4 {
 
     .doctor-care,
     .logo-mob {
-        margin: 27px 0 27px 24px;
+        padding: 27px 0;
         align-self: flex-start;
     }
 
@@ -542,10 +534,6 @@ h4 {
     .boas-vindas {
         margin-top: 81px;
         color: var(--main-color);
-    }
-    .introducing {
-        width: 327px;
-        margin-left: 24px;
     }
 
     .users-container {
@@ -604,6 +592,7 @@ h4 {
         flex-direction: column;
         width: 375px;
         height: 969px;
+        padding: 0 24px;
     }
     
     .article-container :nth-child(1) { order: 2; }
@@ -612,22 +601,21 @@ h4 {
     .float-img {
         width: 327px;
         height: 282px;
-        margin: 0 24px 100px;
+        margin: 0 0 100px;
     }
 
     .link-sobre-nos {
         margin-top: 100px;
-        margin-left: 23px;
     }
 
     .entenda {        
         width: 327px;
         height: 78px;
-        margin: 0 24px 24px;
+        margin-bottom: 24px;
     }
 
     .amet {
-        margin: 0 24px 60px;
+        margin-bottom: 60px;
         width: 327px;
         height: 288px;
     }
@@ -636,11 +624,10 @@ h4 {
         flex-direction: column;
         width: 375px;
         height: 735px;
-        padding: 0 24px;
+        padding: 100px 24px;
     }
 
     .contacts {
-        padding-right: 54px;
         flex-direction: row;
     }
 
@@ -650,9 +637,8 @@ h4 {
     }
 
     .entre {
-        margin: 100px 54px 32px 0;
+        margin: 0;        
         width: 297px;
-        height: 78px;
     }
 
     .email {
@@ -662,7 +648,6 @@ h4 {
     .img-man {
         width: 324px;
         height: 213px;
-        margin: 60px 24px 100px 0;
     }
 
     .footer-container {
@@ -687,7 +672,6 @@ h4 {
     }
 
     .social {
-        margin-right: 41px;
         margin: 0 41px 30px 0;
     }
 
