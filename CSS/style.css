@@ -104,6 +104,7 @@ option {
     border: 1px dashed var(--border-color);
     border-radius: 12px;
     margin-right: 226px;
+    cursor: pointer;
 }
 
 .img-download {
