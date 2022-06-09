@@ -60,10 +60,6 @@ h1 {
 select:invalid {
     color: var(--border-color);
 }
-
-/* select {
-    border-right: 16px solid transparent;
-  } */
   
 select {
     -webkit-appearance: none;
