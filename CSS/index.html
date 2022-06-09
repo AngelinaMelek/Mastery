@@ -17,7 +17,7 @@
       <div class="company-data">
             <div class="filing-box">
                 <label for="name" class="title">Your company name<span>*</span></label>
-                <input required id="name" type="text" name="ame" class="field" />
+                <input required id="name" type="text" name="name" class="field" />
             </div>
             <div class="filing-box">
                 <label for="nature" class="title">Nature of Business<span>*</span></label>
@@ -29,12 +29,14 @@
             </div>
             <div class="filing-box">
                 <label for="country" class="title">Country of registartion<span>*</span></label>
-                <select id="country" name="country" required class="field">
-                    <option value=""disabled selected hidden>Select</option>
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="China">China</option>
-                    <option value="UK">UK</option>
-                </select>
+                <div class="select-wrapper">
+                    <select id="country" name="country" required class="field">
+                        <option value=""disabled selected hidden>Select</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="China">China</option>
+                        <option value="UK">UK</option>
+                    </select>
+                </div>
             </div>
             <div class="filing-box">
                 <label for="adress" class="title">Adress</label>
