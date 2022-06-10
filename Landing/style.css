@@ -45,7 +45,7 @@ a:focus {
     z-index: 100;
     width: 1366px;
     height: 72px;
-    padding-left: 123px;
+    padding: 0 123px;
 }
 
 .nav-box {
@@ -81,7 +81,8 @@ a:focus {
     text-align: center;
     font-weight: bold;
     color: var(--main-color);
-    margin: 15px 119px 26px 0;   
+    margin: 15px 0 26px;   
+    cursor: pointer;
 }
 
 .mobile-social,
@@ -100,7 +101,7 @@ a:focus {
     background-position: 780px 76px;
     background-size: 420px 547px;
     background-repeat: no-repeat;
-    padding-left: 123px;
+    padding: 72px 123px 0;
 }
 
 .whatsApp-button {
@@ -157,16 +158,15 @@ h4 {
     margin-bottom: 32px;
     color: #495057;
     width: 585px;
-    height: 54px;
 }
 
 .boas-vindas {
     margin-bottom: 16px;
-    margin-top: 152px;
+    margin-top: 80px;
 }
 
 .users-container {
-    position: absolute;
+    position: relative;
     display: flex; 
     justify-content: center;
     background-color: #FFFAF1;    
@@ -174,8 +174,7 @@ h4 {
     color: var(--text-color);
     width: 1120px;
     height: 210px;
-    margin: 0 123px;
-    top: 571px;
+    margin: -105px 123px;
 }
 
 .quantity-container {
@@ -201,14 +200,18 @@ h4 {
 .quantity-description {
     font-size: 16px;
     color: var(--main-color);
+    font-weight: normal;
 }
 
 .help-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #F7F9F9;
     text-align: center;
     width: 1366px;
     height: 1082px;
-    padding-top: 263px;
+    padding: 263px 122px 160px 123px;
 }
 
 .reviews {
@@ -217,14 +220,14 @@ h4 {
     flex-wrap: wrap;
     align-items: left;
     list-style: none;
-    padding-left: 123px;
+    padding-left: 0;
+    gap: 40px;
 }
 
 .reviews-box {
     background-color: #FFFFFF;
     border: 1px solid var(--bg-color);
     border-radius: 6px;
-    margin: 20px;
     width: 347px;
     height: 207px;
     padding: 24px;
@@ -254,9 +257,11 @@ h4 {
 }
 
 .como-podemos {
-    margin: 16px 434px 44px;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0 44px;
     width: 497px;
-    text-align: center;
+    justify-content: center;
 }
 
 .article-container {
@@ -264,24 +269,27 @@ h4 {
     background-color: #FFFAF1;
     width: 1366px;
     height: 734px;
-    padding-left: 123px;
+    padding: 160px 123px;
 }
 
 .float-img {
     float:left;
-    margin: 160px 67px 160px 0;
+    margin-right: 67px;
+    width: 480px;
+    height: 414px;
 }
 
 .link-sobre-nos {
-    margin-top: 203px;
+    margin-top: 43px;
 }
 
 .entenda {
-    margin: 10px 249px 24px 0;
+    margin-top: 10px;
+    padding-right: 140px;
 }
 
 .amet {
-    margin: 24px 123px 204px 0;
+    margin-top: 24px;
     line-height: 150%;
 }
 
@@ -326,7 +334,6 @@ h4 {
     justify-content: space-between;
     background-color: var(--main-color);
     width: 1366px;
-    height: 268px;
     padding: 80px 123px;
 }
 
@@ -335,12 +342,12 @@ h4 {
 }
 
 .logo-info {
-    margin-bottom: 15px;
+    margin: 0 0 15px;
     color: #FFFAF1;
 }
 
 .todos {
-    margin-bottom: 80px;
+    margin: 0;
     color: #FFFAF1;
 }
 
@@ -352,11 +359,14 @@ h4 {
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden,
 .burger-menu-bg,
-.logo-mob {
+.logo-mob,
+.burger-menu {
     display: none;
 }
 
@@ -425,7 +435,8 @@ h4 {
     #burger-menu-button:checked ~ .agendar-button,
     #burger-menu-button:checked ~ .burger-menu-bg,
     #burger-menu-button:checked ~ .logo-mob,
-    .doctor-care {
+    .doctor-care,
+    .burger-menu {
         display: block;
     }
 
@@ -454,12 +465,12 @@ h4 {
     }
 
     .title-container {
-        width: 375px;
+        width: 375px;        
         height: 1080px;
-        background-position: 57px 487.25px;
+        background-position: 57px 520px;
         background-size: 261.64px 340.75px;
         text-align: center;
-        padding-left: 24px;
+        padding: 72px 24px 0;
     }
 
     .nav {
@@ -468,7 +479,7 @@ h4 {
         flex-direction: column;
         text-align: center;
         align-items: center;
-        padding-left: 24px;
+        padding: 0 24px;
     }
 
     .nav-wrapper {
@@ -516,41 +527,40 @@ h4 {
 
     h1 {
         font-size: 34px;
+        margin: 0;
         width: 327px;
-        height: 132px;
     }
 
     h3 {
         font-size: 30px;
-        width: 314px;
-        height: 117px;
     }
 
     .Os-medicos {
+        font-size: 18px;
         width: 327px;
-        height: 108px;
     }
 
     .boas-vindas {
-        margin-top: 81px;
+        margin-top: 40px;
+        margin-bottom: 16px;
         color: var(--main-color);
     }
 
     .users-container {
         width: 327px;
         height: 470px;
-        margin: 0 24px;
-        top: 828px;
+        margin: -218px 24px;
     }
 
     .quantity-container {
         flex-direction: column;
         margin-top: 40px;
         margin-bottom: 4px;
+        padding: 0;
     }
 
     .quantity {
-        padding: 0 80px; 
+        padding: 0 72px; 
     }
 
     .quantity:not(:last-child) {
@@ -564,15 +574,14 @@ h4 {
     .help-container {
         width: 375px;
         height: 2034px;
-        padding-top: 318px;
+        padding: 318px 24px 100px;
     }
 
-    .reviews {
-        padding-left: 24px;
+    .link-servicos {
+        margin: 0;
     }
 
     .reviews-box {
-        margin: 0 0 32px 0;
         width: 327px;
         font-size: 16px;
     }
@@ -582,9 +591,8 @@ h4 {
     }
 
     .como-podemos {
-        margin: 16px 31px 60px;
+        margin: 16px 0 60px;
         width: 314px;
-        height: 117px;
         font-size: 30px;
     }
 
@@ -592,7 +600,7 @@ h4 {
         flex-direction: column;
         width: 375px;
         height: 969px;
-        padding: 0 24px;
+        padding: 100px 24px;
     }
     
     .article-container :nth-child(1) { order: 2; }
@@ -601,23 +609,22 @@ h4 {
     .float-img {
         width: 327px;
         height: 282px;
-        margin: 0 0 100px;
     }
 
     .link-sobre-nos {
-        margin-top: 100px;
+        margin: 0;
+        margin-bottom: 16px;
     }
 
     .entenda {        
         width: 327px;
-        height: 78px;
         margin-bottom: 24px;
+        padding: 0;
     }
 
     .amet {
         margin-bottom: 60px;
         width: 327px;
-        height: 288px;
     }
 
     .contacts-container {
