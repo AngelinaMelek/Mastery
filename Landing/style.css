@@ -112,7 +112,7 @@ a:focus {
     height: 52px;
     border-radius: 40px;
     font-size: 14px;
-    padding: 16px 32px 16px 0;
+    padding: 16px 0;
     color: #FFFFFF;
 }
 
@@ -130,7 +130,6 @@ h1 {
     margin-bottom: 24px;
     color: var(--text-color);
     width: 605px;
-    height: 136px;
 }
 
 h2 {
@@ -172,25 +171,25 @@ h4 {
     background-color: #FFFAF1;    
     text-align: center;
     color: var(--text-color);
-    width: 1120px;
-    height: 210px;
-    margin: -105px 123px;
+    margin: -105px 123px 0;
+    padding: 60px 119px;
 }
 
 .quantity-container {
     display: flex;
-    flex-direction: row;
     align-items:center;
     list-style: none;
     font-weight: bold;
     font-size: 48px;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .quantity {
     display: flex;
     flex-direction: column;
     padding: 0 100px; 
+    min-width: 385px;
 }
 
 .quantity:not(:last-child) {
@@ -209,8 +208,7 @@ h4 {
     align-items: center;
     background-color: #F7F9F9;
     text-align: center;
-    width: 1366px;
-    height: 1082px;
+    margin-top: -105px;
     padding: 263px 122px 160px 123px;
 }
 
@@ -229,7 +227,6 @@ h4 {
     border: 1px solid var(--bg-color);
     border-radius: 6px;
     width: 347px;
-    height: 207px;
     padding: 24px;
     box-sizing:border-box;
     text-align: left;
@@ -245,8 +242,6 @@ h4 {
 }
 
 .amet-help {
-    width: 299px;
-    height: 72px;
     font-size: 16px;
     text-align: left;
 }
@@ -267,8 +262,6 @@ h4 {
 .article-container {
     display: flex;
     background-color: #FFFAF1;
-    width: 1366px;
-    height: 734px;
     padding: 160px 123px;
 }
 
@@ -297,8 +290,6 @@ h4 {
     display: flex;    
     justify-content: space-between;
     background-color: #FFFFFF;
-    width: 1366px;
-    height: 699px;
     padding: 160px 123px;
 }
 
@@ -310,7 +301,6 @@ h4 {
 .entre {
     margin-bottom: 40px; 
     width: 404px;
-    height: 104px;
 }
 
 .adress-items {
@@ -333,7 +323,6 @@ h4 {
     display: flex;
     justify-content: space-between;
     background-color: var(--main-color);
-    width: 1366px;
     padding: 80px 123px;
 }
 
@@ -517,7 +506,7 @@ h4 {
 
     .whatsApp-button {
         width: 263px;
-        padding: 17px 32px 17px 0;
+        padding: 17px 0;
     }
 
     .img-whatsApp {
@@ -547,34 +536,34 @@ h4 {
     }
 
     .users-container {
-        width: 327px;
-        height: 470px;
-        margin: -218px 24px;
+        width: 327px;        
+        padding: 40px 72px;
+        margin: -218px 24px 0;
     }
 
     .quantity-container {
         flex-direction: column;
-        margin-top: 40px;
-        margin-bottom: 4px;
         padding: 0;
+        margin: 0;
     }
 
     .quantity {
-        padding: 0 72px; 
+        padding: 0; 
+        margin-bottom: 60px;
+    }
+
+    .quantity:last-child {
+        margin-bottom: 0;
     }
 
     .quantity:not(:last-child) {
         border: 0;
     }
 
-    .quantity-description {
-        margin-bottom: 60px;
-    }
-
     .help-container {
         width: 375px;
-        height: 2034px;
         padding: 318px 24px 100px;
+        margin-top: -218px;
     }
 
     .link-servicos {
@@ -599,7 +588,6 @@ h4 {
     .article-container {
         flex-direction: column;
         width: 375px;
-        height: 969px;
         padding: 100px 24px;
     }
     
@@ -630,7 +618,6 @@ h4 {
     .contacts-container {
         flex-direction: column;
         width: 375px;
-        height: 735px;
         padding: 100px 24px;
     }
 
@@ -641,10 +628,11 @@ h4 {
     .wrapper {
         width: 324px;
         height: 213px;
+        margin-top: 60px;
     }
 
     .entre {
-        margin: 0;        
+        margin: 0 0 32px;        
         width: 297px;
     }
 
@@ -661,8 +649,12 @@ h4 {
         flex-direction: column;
         justify-content:left;
         width: 375px;
-        height: 285px;
-        padding: 60px 113px 62px 24px;
+        padding: 60px 113px 62px 26px;
+    }
+
+    .logo {
+        width: 236px;
+        height: 31px;
     }
 
     .logo-info {
@@ -679,9 +671,8 @@ h4 {
     }
 
     .social {
-        margin: 0 41px 30px 0;
+        margin: 0 41px 0 0;
     }
-
 }
 
 
