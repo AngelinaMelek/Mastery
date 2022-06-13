@@ -74,7 +74,6 @@ select {
     content: ">";
     color: var(--border-color);
     font-size: 1rem;
-    top: 6px;
     left: 355px;
     top: 15px;
     transform: rotate(90deg);
