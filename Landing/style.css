@@ -1,0 +1,687 @@
+html {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+    width: 1366px;
+}
+
+html { box-sizing: border-box; } 
+
+*, *:before, *:after { box-sizing: inherit; }
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/dm-sans-v11-latin-regular.woff2') format('woff2'),
+            url('fonts/dm-sans-v11-latin-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-color: #00856F;
+    --bg-color: #DCE9E2;
+    --text-color: #212529;
+}
+
+.link-style {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 16px;
+} 
+
+a:focus {
+    color: black;
+    outline: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    position: fixed;
+    z-index: 100;
+    width: 1366px;
+    height: 72px;
+    padding: 0 123px;
+}
+
+.nav-box {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0 26px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-link {
+    margin-right: 32px;
+}
+
+.nav-link--active,
+.nav-link:active {
+    border-bottom: 2px solid var(--main-color);
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.doctor-care {
+   padding: 27px 0 27px 2px;
+}
+
+.agendar-button {
+    background-color: var(--bg-color); 
+    width: 190px;
+    height: 38px;
+    border: 1px solid var(--main-color);
+    border-radius: 40px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 15px 0 26px;   
+    cursor: pointer;
+}
+
+.mobile-social,
+.mobile-social-items {
+    display: none;
+}
+
+.title-container { 
+    margin: 0;
+    display:flex;
+    flex-wrap: wrap; 
+    width: 1366px;
+    height: 678px;
+    background-color: var(--bg-color);
+    background-image: url(img/woman.png);
+    background-position: 780px 76px;
+    background-size: 420px 547px;
+    background-repeat: no-repeat;
+    padding: 72px 123px 0;
+}
+
+.whatsApp-button {
+    display:inline-flex;
+    cursor: pointer;
+    background-color: var(--main-color);
+    width: 263px;
+    height: 52px;
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 16px 0;
+    color: #FFFFFF;
+}
+
+.whatsApp-button:hover {
+    background-color: var(--bg-color);
+}
+
+.img-whatsApp {
+    margin-right: 18px;
+    margin-left: 33px;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 24px;
+    color: var(--text-color);
+    width: 605px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+h4 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.Os-medicos {
+    font-size: 18px;
+    margin-bottom: 32px;
+    color: #495057;
+    width: 585px;
+}
+
+.boas-vindas {
+    margin-bottom: 16px;
+    margin-top: 80px;
+}
+
+.users-container {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    background-color: #FFFAF1;    
+    text-align: center;
+    color: var(--text-color);
+    margin: -105px 123px 0;
+    padding: 60px 119px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items:center;
+    list-style: none;
+    font-weight: bold;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px; 
+}
+
+.quantity:first-child {
+    padding-left: 0;
+}
+
+.quantity:last-child {
+    padding-right: 0;
+}
+
+.quantity:not(:last-child) {
+    border-right: 1px solid var(--main-color);
+}
+
+.quantity-description {
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: normal;
+}
+
+.help-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F7F9F9;
+    text-align: center;
+    margin-top: -105px;
+    padding: 263px 122px 160px 123px;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: left;
+    list-style: none;
+    padding-left: 0;
+    gap: 40px;
+}
+
+.reviews-box {
+    background-color: #FFFFFF;
+    border: 1px solid var(--bg-color);
+    border-radius: 6px;
+    width: 347px;
+    padding: 24px;
+    box-sizing:border-box;
+    text-align: left;
+    font-size: 14px;
+}
+
+.reviews-box:hover {
+    transform: scale(1.1);
+}
+
+.img-check {
+    margin-bottom: 16px;
+}
+
+.amet-help {
+    font-size: 16px;
+    text-align: left;
+}
+
+.link-servicos {
+    font-size: 14px;     
+    color: var(--main-color);
+}
+
+.como-podemos {
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0 44px;
+    width: 497px;
+    justify-content: center;
+}
+
+.article-container {
+    display: flex;
+    background-color: #FFFAF1;
+    padding: 160px 123px;
+}
+
+.float-img {
+    float:left;
+    margin-right: 67px;
+    width: 480px;
+    height: 414px;
+}
+
+.link-sobre-nos {
+    margin-top: 43px;
+}
+
+.entenda {
+    margin-top: 10px;
+    padding-right: 140px;
+}
+
+.amet {
+    margin-top: 24px;
+    line-height: 150%;
+}
+
+.contacts-container {
+    display: flex;    
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 160px 123px;
+}
+
+.wrapper {
+    width: 575px;
+    height: 379px;
+}
+
+.entre {
+    margin-bottom: 40px; 
+    width: 404px;
+}
+
+.adress-items {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 16px;
+}
+
+.email {
+    margin-bottom: 40px;
+}
+
+.img-contact {
+    margin-right: 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 80px 123px;
+}
+
+.logo {
+    margin-bottom: 24px;
+}
+
+.logo-info {
+    margin: 0 0 15px;
+    color: #FFFAF1;
+}
+
+.todos {
+    margin: 0;
+    color: #FFFAF1;
+}
+
+.social {
+    margin: 42px 20px;
+}
+
+.social-position {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden,
+.burger-menu-bg,
+.logo-mob,
+.burger-menu {
+    display: none;
+}
+
+@media (max-width:376px) {
+
+    html {
+        width: 375px;
+        text-align: left;
+    }   
+    
+    .visually-hidden {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+    }
+
+    #burger-menu-button:checked ~ label::before,
+    #burger-menu-button:checked ~ label::after {
+        content: "";
+        position: absolute;
+        border-top: 2px solid var(--bg-color);
+        width: 29px;
+        top: 34px;
+        right: 20px;
+    }
+
+    #burger-menu-button:checked ~ label::before {
+        transform: rotate(45deg);
+    }
+
+    #burger-menu-button:checked ~ label::after {
+        transform: rotate(-45deg);
+    }
+
+    #burger-menu-button:not(:checked) ~ .burger-menu {
+        display: inline-block;
+        border-top: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        height: 10px;
+        width: 20px;
+        position: absolute;
+        right: 26px;
+        top: 26px;
+    }
+
+    #burger-menu-button:not(:checked) ~ .burger-menu::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        border-bottom: 2px solid var(--main-color);
+        width: 10px;
+        height: 16px;
+    }
+
+    .nav-box, 
+    .agendar-button,
+    .logo-mob,
+    #burger-menu-button:checked ~ .doctor-care {
+        display: none;
+    }
+
+    #burger-menu-button:checked ~ .nav-box,
+    #burger-menu-button:checked ~ .agendar-button,
+    #burger-menu-button:checked ~ .burger-menu-bg,
+    #burger-menu-button:checked ~ .logo-mob,
+    .doctor-care,
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu-bg {
+        position: absolute;
+        background-color: var(--main-color);
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        left: 0;
+    }
+
+    #burger-menu-button:checked ~ .mobile-social {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        list-style: none;
+        padding: 0;  
+    }
+    
+    .mobile-social-items {
+        display: block;
+        margin-right: 41px; 
+        width: 20px;
+        height: 20px;
+    }
+
+    .title-container {
+        width: 375px;        
+        height: 1080px;
+        background-position: 57px 520px;
+        background-size: 261.64px 340.75px;
+        text-align: center;
+        padding: 72px 24px 0;
+    }
+
+    .nav {
+        width: 375px;
+        height: 72px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .nav-wrapper {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .nav-box {
+        flex-direction: column;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .nav-link {
+        margin: 24px 0;
+        color: var(--bg-color);
+        font-size: 24px;
+        font-weight: normal;
+    }
+   
+    .agendar-button {
+        width: 274px;
+        height: 55px;
+        line-height: 2.5;
+        font-size: 18px;
+        color: var(--main-color);
+        margin: 24px 50px 82px; 
+    }
+
+    .doctor-care,
+    .logo-mob {
+        padding: 27px 0;
+        align-self: flex-start;
+    }
+
+    .whatsApp-button {
+        width: 263px;
+        padding: 17px 0;
+    }
+
+    .img-whatsApp {
+        margin-right: 17px;
+        margin-left: 33px;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin: 0;
+        width: 327px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .Os-medicos {
+        font-size: 18px;
+        width: 327px;
+    }
+
+    .boas-vindas {
+        margin-top: 40px;
+        margin-bottom: 16px;
+        color: var(--main-color);
+    }
+
+    .users-container {
+        width: 327px;        
+        padding: 40px 72px;
+        margin: -218px 24px 0;
+    }
+
+    .quantity-container {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .quantity {
+        padding: 0; 
+        margin-bottom: 60px;
+    }
+
+    .quantity:last-child {
+        margin-bottom: 0;
+    }
+
+    .quantity:not(:last-child) {
+        border: 0;
+    }
+
+    .help-container {
+        width: 375px;
+        padding: 318px 24px 100px;
+        margin-top: -218px;
+    }
+
+    .link-servicos {
+        margin: 0;
+    }
+
+    .reviews-box {
+        width: 327px;
+        font-size: 16px;
+    }
+
+    .amet-help {
+        width: 279px;
+    }
+
+    .como-podemos {
+        margin: 16px 0 60px;
+        width: 314px;
+        font-size: 30px;
+    }
+
+    .article-container {
+        flex-direction: column;
+        width: 375px;
+        padding: 100px 24px;
+    }
+    
+    .article-container :nth-child(1) { order: 2; }
+    .article-container :nth-child(2) { order: 1; }
+
+    .float-img {
+        width: 327px;
+        height: 282px;
+    }
+
+    .link-sobre-nos {
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .entenda {        
+        width: 327px;
+        margin-bottom: 24px;
+        padding: 0;
+    }
+
+    .amet {
+        margin-bottom: 60px;
+        width: 327px;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+        width: 375px;
+        padding: 100px 24px;
+    }
+
+    .contacts {
+        flex-direction: row;
+    }
+
+    .wrapper {
+        width: 324px;
+        height: 213px;
+        margin-top: 60px;
+    }
+
+    .entre {
+        margin: 0 0 32px;        
+        width: 297px;
+    }
+
+    .email {
+        margin-bottom: 32px;
+    }
+
+    .img-man {
+        width: 324px;
+        height: 213px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content:left;
+        width: 375px;
+        padding: 60px 113px 62px 26px;
+    }
+
+    .logo {
+        width: 236px;
+        height: 31px;
+    }
+
+    .logo-info {
+        margin-bottom: 12px;
+    }
+
+    .todos {
+        margin-bottom: 34px;
+    }
+
+    .social-position {
+        margin: 0;
+        padding: 0;
+    }
+
+    .social {
+        margin: 0 41px 0 0;
+    }
+}
+
+
+
+
