@@ -189,7 +189,14 @@ h4 {
     display: flex;
     flex-direction: column;
     padding: 0 100px; 
-    min-width: 385px;
+}
+
+.quantity:first-child {
+    padding-left: 0;
+}
+
+.quantity:last-child {
+    padding-right: 0;
 }
 
 .quantity:not(:last-child) {
