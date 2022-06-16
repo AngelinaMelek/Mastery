@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+    <title>Table</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+            <th class="thead-th">&nbsp;</th>
+            <th class="thead-th" colspan="2">Name</th>
+            <th class="thead-th" colspan="2">User credentials</th>
+            <th class="thead-th">Last Transcation</th>
+            <th class="thead-th">Status</th>
+            <th class="thead-th">End date</th>
+            <th class="thead-th">Total Used</th>
+            <th class="thead-th">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="td-spacing" colspan="10">
+                    <ul class="bottom-button">
+                        <li class="pagination-item"><a class="link-style" href="#">&lt;</a></li>
+                        <li class="pagination-item"><a class="link-style" href="#">1</a></li>
+                        <li class="pagination-item"><a class="link-style" href="#">2</a></li>
+                        <li class="pagination-item"><a class="link-style" href="#">3</a></li>
+                        <li class="pagination-item"><a class="link-style" href="#">4</a></li>
+                        <li class="pagination-item"><a class="link-style" href="#">&gt;</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <template id="productrow">
+        <tr>
+            <td class="td-spacing" rowspan="2"> <input type="checkbox"></td>
+            <td class="td-spacing" rowspan="2"><img src="" alt="" width="50" height="50">
+            </td>
+            <td class="td-bold"></td>       
+            <td class="td-bold"></td>
+            <td class="td-bold"></td>
+            <td class="td-bold"></td>
+            <td class="status" rowspan="2"></td>
+            <td class="td-spacing" rowspan="2"></td>
+            <td class="big-price" rowspan="2"></td>
+            <td class="td-spacing" rowspan="2"><button type="button" class="option-button"><span>.</span><span>.</span><span>.</span></button></td> 
+        </tr>
+        <tr>
+            <td class="td-spacing"><a class="link-style" href=""></a></td> 
+            <td class="td-spacing"></td>
+            <td class="td-spacing"></td>
+            <td class="td-spacing"></td>
+        </tr>
+      </template>
+</body>
+</html>
