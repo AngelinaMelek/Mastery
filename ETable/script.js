@@ -81,14 +81,15 @@ const arr = [
 if ("content" in document.createElement("template")) {
   // Instantiate the table with the existing HTML tbody
   // and the row with the template
-  var tbody = document.querySelector("tbody");
-  var template = document.querySelector("#productrow");
+  const tbody = document.querySelector("tbody");
+  const template = document.querySelector("#productrow");
 
   for (let i = 0; i < arr.length; i++) {
-    var clone = template.content.cloneNode(true);
+    const clone = template.content.cloneNode(true);
     const td = clone.querySelectorAll("td");
-    td[1].querySelector("img").setAttribute("src", arr[i].icon);
-    td[1].querySelector("img").setAttribute("alt", arr[i].alt);
+    const img = clone.querySelector("img");
+    td[1] = img.setAttribute("src", arr[i].icon);
+    td[1] = img.setAttribute("alt", arr[i].alt);
     td[2].textContent = arr[i].name;
     td[3].textContent = arr[i].type;
     td[4].textContent = arr[i].user;
@@ -108,5 +109,3 @@ if ("content" in document.createElement("template")) {
     }
   }
 }
-
-console.log(arr);
