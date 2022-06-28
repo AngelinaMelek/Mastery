@@ -115,7 +115,6 @@ if ("content" in document.createElement("template")) {
 
   const mySearch = document.getElementById("mySearch");
   mySearch.addEventListener("input", function () {
-    mySearch.value = mySearch.value.toLowerCase();
     clearTable();
     builder(filterItems(myData, mySearch.value));
   });
@@ -126,10 +125,3 @@ if ("content" in document.createElement("template")) {
     });
   }
 }
-
-/*
-1.Добавить обработчик onChange на инпут
-2.filter on array (item.name.includes())
-3. Очистить таблицу 
-4.Draw with new data
-*/
