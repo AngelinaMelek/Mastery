@@ -412,10 +412,16 @@ h4 {
 }
 
 .contactPhone {
-    width: 250px;
+    width: 80%;
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+
+.contactPhone-button {
+    width: 30%;
+    display: block;
+    margin: 20px auto;
 }
 
 @media (max-width:376px) {
