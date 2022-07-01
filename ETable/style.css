@@ -122,3 +122,16 @@ a:focus {
 .uppercase {
     text-transform: uppercase;
 }
+
+.field {
+    border: 1.5px solid #E1E1E1;;
+    border-radius: 8px;
+    margin: 0 13px 2px;
+    width: 157px;
+    height: 42px;
+}
+
+thead,
+tfoot {
+    height: 89px;
+}

@@ -53,10 +53,10 @@ const myData = [
     card: "***** 2468",
     user: "Itai Bracha31",
     email: "Itai Bracha31@gmail.com",
-    date: "Jul 19,2022",
+    date: "Jun 19,2022",
     price: "$783.22",
     status: "Pending",
-    endDate: "Jul 29,2022",
+    endDate: "Jun 29,2022",
     total: "$783.22",
   },
   {
@@ -68,10 +68,10 @@ const myData = [
     card: "***** 2468",
     user: "Itai Bracha31",
     email: "Itai Bracha31@gmail.com",
-    date: "Oct 12,2022",
+    date: "Apr 12,2022",
     price: "$783.22",
     status: "Done",
-    endDate: "Oct 22,2022",
+    endDate: "Apr 22,2022",
     total: "$783.22",
   },
 ];
@@ -90,9 +90,9 @@ if ("content" in document.createElement("template")) {
       td[2].textContent = arr[i].name;
       td[3].textContent = arr[i].type;
       td[4].textContent = arr[i].user;
-      td[5].textContent = arr[i].endDate;
+      td[5].textContent = arr[i].date;
       td[6].textContent = arr[i].status;
-      td[7].textContent = arr[i].date;
+      td[7].textContent = arr[i].endDate;
       td[8].textContent = arr[i].total;
       td[10].textContent = arr[i].url;
       td[11].textContent = arr[i].card;
@@ -114,14 +114,45 @@ if ("content" in document.createElement("template")) {
   }
 
   const mySearch = document.getElementById("mySearch");
-  mySearch.addEventListener("input", function () {
-    clearTable();
-    builder(filterItems(myData, mySearch.value));
+  mySearch.addEventListener("input", function (event) {
+    filterDateBuilder();
   });
 
   function filterItems(arr, query) {
     return arr.filter(function (el) {
       return el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    });
+  }
+
+  const startDateElem = document.querySelector("#startDate");
+  const endDateElem = document.querySelector("#endDate");
+
+  startDateElem.addEventListener("change", (event) => {
+    filterDateBuilder();
+  });
+
+  endDateElem.addEventListener("change", (event) => {
+    filterDateBuilder();
+  });
+
+  function filterDateBuilder() {
+    let startDate = new Date(startDateElem.value);
+    let endDate = new Date(endDateElem.value);
+    clearTable();
+    if (startDateElem.value === "") {
+      startDate = new Date(0);
+    }
+    if (endDateElem.value === "") {
+      endDate = new Date();
+    }
+    const newDate = filterDate(myData, startDate, endDate);
+    builder(filterItems(newDate, mySearch.value));
+  }
+
+  function filterDate(arr, start, end) {
+    return arr.filter(function (el) {
+      const itemDate = new Date(el.date);
+      return start < itemDate && end > itemDate;
     });
   }
 }
