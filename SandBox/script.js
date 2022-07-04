@@ -9,15 +9,15 @@ const masha = { name: "Маша", age: 18 };
 const vovochka = { name: "Вовочка", age: 6 };
 
 const people = [vasya, masha, vovochka];
-
-people.sort((a, b) => a.age - b.age);
+const clone = Object.assign([], people);
+clone.sort((a, b) => a.age - b.age);
 // people.sort(function (a, b) {
 //   return a.age - b.age;
 // });
-console.log(people);
+console.log(clone);
 
 // теперь people: [vovochka, masha, vasya]
-console.log(people[0].age); // 6
+console.log(clone[0].age); // 6
 
 console.log("");
 
@@ -172,47 +172,51 @@ console.log("");
  * [Number] Средний бал среди всех учащихся
  */
 
-function meanGradeFunction(arr) {
-  let sum = 0;
-  let itemsFound = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum = arr[i].grade + sum;
-    itemsFound = itemsFound + 1;
-  }
-  const meanGrade = (sum / itemsFound).toFixed(2);
-  return meanGrade;
-}
-console.log(meanGradeFunction(students));
+const meanGrade = function (arr) {
+  const initialValue = 0;
+  return (
+    arr.reduce(
+      (previousValue, currentValue) => previousValue + currentValue.grade,
+      initialValue
+    ) / arr.length
+  ).toFixed(2);
+};
+console.log(meanGrade(students));
 console.log("");
 
 /**
  * [Number] Средний бал среди несовершеннолетних (возраст < 18)
  */
 const teenMeanGrade = function (arr) {
-  return arr.filter(function (el) {
-    return el.age < 18;
-  });
+  return meanGrade(
+    arr.filter(function (el) {
+      return el.age < 18;
+    })
+  );
 };
-
-console.log(meanGradeFunction(teenMeanGrade(students)));
+console.log(teenMeanGrade(students));
+// console.log(meanGrade(teenMeanGrade(students)));
 console.log("");
 
 /**
  * [Number] Средний бал среди совершеннолетних парней
  */
 const menMeanGrade = function (arr) {
-  return arr.filter(function (el) {
-    return el.gender === "M" && el.age >= 18;
-  });
+  return meanGrade(
+    arr.filter(function (el) {
+      return el.gender === "M" && el.age >= 18;
+    })
+  );
 };
 
-console.log(meanGradeFunction(menMeanGrade(students)));
+console.log(menMeanGrade(students));
 console.log("");
 
 /**
  * [Array<Student>] Массив учащихся, отсортированных по возрастанию балов.
  */
-const studendsByGrades = students.sort((a, b) => a.grade - b.grade);
+const tempArr = Object.assign([], students);
+const studendsByGrades = tempArr.sort((a, b) => a.grade - b.grade);
 console.log(studendsByGrades);
 console.log("");
 
@@ -220,24 +224,29 @@ console.log("");
  * [Array<String>] Массив имен всех учащихся
  */
 
-function studentName(arr, name) {
-  return arr.map((el) => el[name]);
+function studentName(arr) {
+  return arr.map((el) => el.name);
 }
 
 const studentNames = studentName(students, "name");
 console.log(studentNames);
 console.log("");
-
+console.log("");
+console.log("");
+console.log("");
+console.log("");
 /**
  * [Array<String>] Массив имен всех девушек
  */
 const girlNames = function (arr) {
-  return arr.filter(function (el) {
-    return el.gender === "F";
-  });
+  return arr
+    .filter(function (el) {
+      return el.gender === "F";
+    })
+    .map((el) => el.name);
 };
 
-console.log(studentName(girlNames(students), "name"));
+console.log(girlNames(students));
 console.log("");
 
 /**
@@ -258,11 +267,13 @@ console.log("");
  */
 //const californians;
 const california = function (arr) {
-  return arr.filter(function (el) {
-    return el.state === "California" && adultsCount(students);
-  });
+  return arr
+    .filter(function (el) {
+      return el.state === "California" && adultsCount(students);
+    })
+    .map((el) => el.name);
 };
-console.log(studentName(california(students), "name"));
+console.log(california(students));
 console.log("");
 
 /**
@@ -270,8 +281,10 @@ console.log("");
  */
 
 const alaska = function (arr) {
-  return arr.filter(function (el) {
-    return el.state === "Alaska" && el.name.startsWith("S");
-  });
+  return arr
+    .filter(function (el) {
+      return el.state === "Alaska" && el.name.startsWith("S");
+    })
+    .map((el) => el.name);
 };
-console.log(meanGradeFunction(alaska(students)));
+console.log(alaska(students));
