@@ -13,6 +13,12 @@
     <input id="startDate" type="date" name="startDate" class="field" />
     <label for="endDate" class="">End date</label>
     <input id="endDate" type="date" name="endDate" class="field" />
+    <select id="sortBy" name="sortBy" required class="field">
+        <option value=""disabled selected hidden>Sort by</option>
+        <option id="selectedName" value="Name">Name</option>
+        <option id="selectedLastT" value="LastT">Last Transcation</option>
+    </select>
+
     <table class="table">
         <thead>
             <tr>

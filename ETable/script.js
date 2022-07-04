@@ -147,6 +147,14 @@ if ("content" in document.createElement("template")) {
     }
     const newDate = filterDate(myData, startDate, endDate);
     builder(filterItems(newDate, mySearch.value));
+    if (selectedName.value === "Name") {
+      clearTable();
+      builder(sortByName(newDate));
+    }
+    if (selectedName.value === "LastT") {
+      clearTable();
+      builder(sortByDate(newDate));
+    }
   }
 
   function filterDate(arr, start, end) {
@@ -155,4 +163,25 @@ if ("content" in document.createElement("template")) {
       return start < itemDate && end > itemDate;
     });
   }
+
+  const selectedName = document.querySelector("#sortBy");
+  console.log(selectedName);
+
+  selectedName.addEventListener("click", (event) => {
+    filterDateBuilder();
+  });
+
+  const copyArr = Object.assign([], myData);
+
+  function sortByName(arr) {
+    return arr.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  console.log(sortByName(copyArr));
+  console.log("");
+
+  const copyArrDate = Object.assign([], myData);
+  function sortByDate(arr) {
+    return arr.sort((a, b) => new Date(a.date) - new Date(b.date));
+  }
+  console.log(sortByDate(copyArrDate));
 }
