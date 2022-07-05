@@ -9,11 +9,11 @@ const masha = { name: "Маша", age: 18 };
 const vovochka = { name: "Вовочка", age: 6 };
 
 const people = [vasya, masha, vovochka];
-const clone = Object.assign([], people);
-clone.sort((a, b) => a.age - b.age);
-// people.sort(function (a, b) {
-//   return a.age - b.age;
-// });
+const clone = people.slice();
+// clone.sort((a, b) => a.age - b.age);
+clone.sort(function (a, b) {
+  return a.age - b.age;
+});
 console.log(clone);
 
 // теперь people: [vovochka, masha, vasya]
@@ -59,11 +59,13 @@ const characters = [
   { name: "Фёдор", age: 40 },
 ];
 
-function pluck(arr, name) {
-  return arr.map((el) => el[name]);
+function pluck(arr) {
+  return arr.map(function (el) {
+    return el.name;
+  });
 }
 
-console.log(pluck(characters, "name")); // ['Михаил', 'Фёдор']
+console.log(pluck(characters)); // ['Михаил', 'Фёдор']
 console.log("");
 
 /**
@@ -173,11 +175,10 @@ console.log("");
  */
 
 const meanGrade = function (arr) {
-  const initialValue = 0;
   return (
     arr.reduce(
       (previousValue, currentValue) => previousValue + currentValue.grade,
-      initialValue
+      0
     ) / arr.length
   ).toFixed(2);
 };
@@ -195,7 +196,6 @@ const teenMeanGrade = function (arr) {
   );
 };
 console.log(teenMeanGrade(students));
-// console.log(meanGrade(teenMeanGrade(students)));
 console.log("");
 
 /**
@@ -215,7 +215,7 @@ console.log("");
 /**
  * [Array<Student>] Массив учащихся, отсортированных по возрастанию балов.
  */
-const tempArr = Object.assign([], students);
+const tempArr = students.slice();
 const studendsByGrades = tempArr.sort((a, b) => a.grade - b.grade);
 console.log(studendsByGrades);
 console.log("");
@@ -225,15 +225,13 @@ console.log("");
  */
 
 function studentName(arr) {
-  return arr.map((el) => el.name);
+  return arr.map(function (el) {
+    return el.name;
+  });
 }
 
-const studentNames = studentName(students, "name");
+const studentNames = studentName(students);
 console.log(studentNames);
-console.log("");
-console.log("");
-console.log("");
-console.log("");
 console.log("");
 /**
  * [Array<String>] Массив имен всех девушек
@@ -253,27 +251,27 @@ console.log("");
  * [Array<String>] Имена всех штатов, в которых живут учащиеся (без повторений!)
  */
 const states = function (arr) {
-  const a = pluck(arr, "state");
-  const uniqueChars = a.filter((el, index) => {
-    return a.indexOf(el) === index;
-  });
-  console.log(uniqueChars);
+  return arr
+    .map((el) => el.state)
+    .filter((el, index) => {
+      return arr.map((el) => el.state).indexOf(el) === index;
+    });
 };
-states(students);
+console.log(states(students));
 console.log("");
 
 /**
  * [Array<String>] Имена всех совершеннолетних из штата California
  */
-//const californians;
 const california = function (arr) {
   return arr
     .filter(function (el) {
-      return el.state === "California" && adultsCount(students);
+      return el.state === "California" && el.age >= 18;
     })
     .map((el) => el.name);
 };
 console.log(california(students));
+console.log("");
 console.log("");
 
 /**
@@ -281,10 +279,13 @@ console.log("");
  */
 
 const alaska = function (arr) {
-  return arr
-    .filter(function (el) {
-      return el.state === "Alaska" && el.name.startsWith("S");
-    })
-    .map((el) => el.name);
+  const a = arr.filter(function (el) {
+    return el.state === "Alaska" && el.name.startsWith("S");
+  });
+  return (
+    a.reduce(function (previousValue, currentValue) {
+      return previousValue + currentValue.grade;
+    }, 0) / a.length
+  );
 };
 console.log(alaska(students));
