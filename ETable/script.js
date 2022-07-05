@@ -115,7 +115,7 @@ if ("content" in document.createElement("template")) {
 
   const mySearch = document.getElementById("mySearch");
   mySearch.addEventListener("input", function (event) {
-    filterDateBuilder();
+    filterHandler();
   });
 
   function filterItems(arr, query) {
@@ -128,14 +128,14 @@ if ("content" in document.createElement("template")) {
   const endDateElem = document.querySelector("#endDate");
 
   startDateElem.addEventListener("change", (event) => {
-    filterDateBuilder();
+    filterHandler();
   });
 
   endDateElem.addEventListener("change", (event) => {
-    filterDateBuilder();
+    filterHandler();
   });
 
-  function filterDateBuilder() {
+  function filterHandler() {
     let startDate = new Date(startDateElem.value);
     let endDate = new Date(endDateElem.value);
     clearTable();
@@ -146,15 +146,10 @@ if ("content" in document.createElement("template")) {
       endDate = new Date();
     }
     const newDate = filterDate(myData, startDate, endDate);
-    builder(filterItems(newDate, mySearch.value));
-    if (selectedName.value === "Name") {
-      clearTable();
-      builder(sortByName(newDate));
-    }
-    if (selectedName.value === "LastT") {
-      clearTable();
-      builder(sortByDate(newDate));
-    }
+    const newDateFilter = filterItems(newDate, mySearch.value);
+    const newDateSort = sortByName(newDateFilter);
+
+    builder(newDateSort);
   }
 
   function filterDate(arr, start, end) {
@@ -167,21 +162,17 @@ if ("content" in document.createElement("template")) {
   const selectedName = document.querySelector("#sortBy");
   console.log(selectedName);
 
-  selectedName.addEventListener("click", (event) => {
-    filterDateBuilder();
+  selectedName.addEventListener("change", (event) => {
+    filterHandler();
   });
 
-  const copyArr = Object.assign([], myData);
-
   function sortByName(arr) {
-    return arr.sort((a, b) => a.name.localeCompare(b.name));
+    const copyArr = arr.slice();
+    if (selectedName.value === "Name") {
+      return copyArr.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    if (selectedName.value === "LastT") {
+      return copyArr.sort((a, b) => new Date(a.date) - new Date(b.date));
+    }
   }
-  console.log(sortByName(copyArr));
-  console.log("");
-
-  const copyArrDate = Object.assign([], myData);
-  function sortByDate(arr) {
-    return arr.sort((a, b) => new Date(a.date) - new Date(b.date));
-  }
-  console.log(sortByDate(copyArrDate));
 }
