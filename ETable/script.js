@@ -113,29 +113,7 @@ if ("content" in document.createElement("template")) {
     tbody.textContent = "";
   }
 
-  const mySearch = document.getElementById("mySearch");
-  mySearch.addEventListener("input", function (event) {
-    filterHandler();
-  });
-
-  function filterItems(arr, query) {
-    return arr.filter(function (el) {
-      return el.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-    });
-  }
-
-  const startDateElem = document.querySelector("#startDate");
-  const endDateElem = document.querySelector("#endDate");
-
-  startDateElem.addEventListener("change", (event) => {
-    filterHandler();
-  });
-
-  endDateElem.addEventListener("change", (event) => {
-    filterHandler();
-  });
-
-  function filterHandler() {
+  function filterSortHandler() {
     let startDate = new Date(startDateElem.value);
     let endDate = new Date(endDateElem.value);
     clearTable();
@@ -145,34 +123,49 @@ if ("content" in document.createElement("template")) {
     if (endDateElem.value === "") {
       endDate = new Date();
     }
-    const newDate = filterDate(myData, startDate, endDate);
-    const newDateFilter = filterItems(newDate, mySearch.value);
-    const newDateSort = sortByName(newDateFilter);
 
-    builder(newDateSort);
+    const filtered = myData.filter(
+      (item) =>
+        isDateBetween(item.date, startDate, endDate) &&
+        isSubString(item.name, mySearch.value)
+    );
+    const sortedArray = sortBySelectedOption(filtered);
+    builder(sortedArray);
   }
 
-  function filterDate(arr, start, end) {
-    return arr.filter(function (el) {
-      const itemDate = new Date(el.date);
-      return start < itemDate && end > itemDate;
-    });
+  const mySearch = document.getElementById("mySearch");
+  mySearch.addEventListener("input", filterSortHandler);
+
+  function isSubString(string, value) {
+    return string.toLowerCase().indexOf(value.toLowerCase()) !== -1;
+  }
+
+  const startDateElem = document.querySelector("#startDate");
+  const endDateElem = document.querySelector("#endDate");
+
+  startDateElem.addEventListener("change", filterSortHandler);
+
+  endDateElem.addEventListener("change", filterSortHandler);
+
+  function isDateBetween(date, start, end) {
+    const itemDate = new Date(date);
+    return start < itemDate && end > itemDate;
   }
 
   const selectedName = document.querySelector("#sortBy");
-  console.log(selectedName);
 
-  selectedName.addEventListener("change", (event) => {
-    filterHandler();
-  });
+  selectedName.addEventListener("change", filterSortHandler);
 
-  function sortByName(arr) {
+  function sortBySelectedOption(arr) {
     const copyArr = arr.slice();
     if (selectedName.value === "Name") {
       return copyArr.sort((a, b) => a.name.localeCompare(b.name));
     }
     if (selectedName.value === "LastT") {
       return copyArr.sort((a, b) => new Date(a.date) - new Date(b.date));
+    }
+    if (selectedName.value === "") {
+      return copyArr;
     }
   }
 }

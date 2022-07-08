@@ -1,0 +1,25 @@
+.card {
+    background-color: blanchedalmond;
+    width: 100px;
+    height: 50px;
+    margin: 20px 10px;
+}
+
+.card:hover {
+    transform: scale(1);
+}
+
+.picture {
+    width: 100px;
+    height: 50px;
+}
+
+.position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-column {
+    margin-top: 5%;
+}
