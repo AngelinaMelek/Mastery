@@ -59,13 +59,13 @@ const characters = [
   { name: "Фёдор", age: 40 },
 ];
 
-function pluck(arr) {
+function pluck(arr, name) {
   return arr.map(function (el) {
-    return el.name;
+    return el[name];
   });
 }
 
-console.log(pluck(characters)); // ['Михаил', 'Фёдор']
+console.log(pluck(characters, "name")); // ['Михаил', 'Фёдор']
 console.log("");
 
 /**
@@ -165,7 +165,7 @@ const students = [
 function adultsCount(arr) {
   return arr.filter(function (el) {
     return el.age >= 18;
-  });
+  }).length;
 }
 console.log(adultsCount(students));
 console.log("");
@@ -250,12 +250,11 @@ console.log("");
 /**
  * [Array<String>] Имена всех штатов, в которых живут учащиеся (без повторений!)
  */
+
 const states = function (arr) {
   return arr
     .map((el) => el.state)
-    .filter((el, index) => {
-      return arr.map((el) => el.state).indexOf(el) === index;
-    });
+    .filter((el, index, tempArr) => tempArr.indexOf(el) === index);
 };
 console.log(states(students));
 console.log("");
@@ -271,7 +270,6 @@ const california = function (arr) {
     .map((el) => el.name);
 };
 console.log(california(students));
-console.log("");
 console.log("");
 
 /**
