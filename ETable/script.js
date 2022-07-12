@@ -163,8 +163,7 @@ if ("content" in document.createElement("template")) {
     }
     if (selectedName.value === "LastT") {
       return copyArr.sort((a, b) => new Date(a.date) - new Date(b.date));
-    }
-    if (selectedName.value === "") {
+    }else {
       return copyArr;
     }
   }
