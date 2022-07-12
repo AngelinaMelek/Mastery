@@ -9,9 +9,7 @@ const masha = { name: "Маша", age: 18 };
 const vovochka = { name: "Вовочка", age: 6 };
 
 const people = [vasya, masha, vovochka];
-const clone = people.slice();
-// clone.sort((a, b) => a.age - b.age);
-clone.sort(function (a, b) {
+const clone = people.slice().sort(function (a, b) {
   return a.age - b.age;
 });
 console.log(clone);
