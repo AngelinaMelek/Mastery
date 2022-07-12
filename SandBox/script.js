@@ -213,9 +213,9 @@ console.log("");
 /**
  * [Array<Student>] Массив учащихся, отсортированных по возрастанию балов.
  */
-const tempArr = students.slice();
-const studendsByGrades = tempArr.sort((a, b) => a.grade - b.grade);
+const studendsByGrades = students.slice().sort((a, b) => a.grade - b.grade);
 console.log(studendsByGrades);
+console.log("");
 console.log("");
 
 /**
