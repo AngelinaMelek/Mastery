@@ -366,6 +366,64 @@ h4 {
     display: none;
 }
 
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: var(--main-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #FFFAF1;
+    width: 40%;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+}
+
+.close-modal-window {
+    color: var(--bg-color);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contactPhone {
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contactPhone-button {
+    width: 30%;
+    display: block;
+    margin: 20px auto;
+}
+
 @media (max-width:376px) {
 
     html {

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="normalize.css"> 
-    <link rel="stylesheet" type="text/css" href="style.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <script src="script.js" defer></script> 
     <title>Landing</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
                 Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar 
                 uma cura a longo prazo.
             </p>
-            <button class="whatsApp-button" type="button"><img class="img-whatsApp" src="img/WhatsApp.svg" alt="WhatsApp" /><span>AGENDE SUA CONSULTA</span></button>
+            <button class="whatsApp-button" type="button" data-modal-btn="my-modal"><img class="img-whatsApp" src="img/WhatsApp.svg" alt="WhatsApp" /><span>AGENDE SUA CONSULTA</span></button>
         </div>
     </div>
     <div class="users-container">
@@ -120,5 +121,18 @@
             <li><a href="#"><img class="social" src="img/YouTube.svg" alt="YouTube" /></a></li>
         </ul>
     </footer>
+    <form>
+        <div data-modal-window="my-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <div class="modal-title">Enter your phone number</div>                
+                    <div class="close-modal-window" id="x">&times;</div>
+                </div>
+                <label for="contactPhone">Contact phone</label>
+                <input id="contactPhone" type="tel" pattern="[0-9]{3}-[0-9]{3}" name="contactPhone" class="contactPhone" required/>
+                <button class="contactPhone-button">OK</button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
