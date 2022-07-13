@@ -99,6 +99,7 @@ if ("content" in document.createElement("template")) {
       td[12].textContent = arr[i].email;
       td[13].textContent = arr[i].price;
       tbody.appendChild(clone);
+
       if (td[6].textContent === "Done") {
         td[6].classList.add("status-done");
       } else {
@@ -117,9 +118,11 @@ if ("content" in document.createElement("template")) {
     let startDate = new Date(startDateElem.value);
     let endDate = new Date(endDateElem.value);
     clearTable();
+
     if (startDateElem.value === "") {
       startDate = new Date(0);
     }
+
     if (endDateElem.value === "") {
       endDate = new Date();
     }
@@ -158,12 +161,15 @@ if ("content" in document.createElement("template")) {
 
   function sortBySelectedOption(arr) {
     const copyArr = arr.slice();
+  
     if (selectedName.value === "Name") {
       return copyArr.sort((a, b) => a.name.localeCompare(b.name));
     }
+
     if (selectedName.value === "LastT") {
       return copyArr.sort((a, b) => new Date(a.date) - new Date(b.date));
     }
-      return copyArr;
+    
+    return copyArr;
   }
 }
