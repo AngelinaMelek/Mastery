@@ -16,11 +16,10 @@ const imgData = [
 const cardBack = "./img/font.png";
 
 const doubleImgArrayCopy =  imgData.concat(imgData);
-const doubleImgArray = doubleImgArrayCopy.map((a, i) => Object.assign({id: i, isOpen: false}, a));
+const doubleImgArray = doubleImgArrayCopy.map((a, i) => Object.assign({}, a));
 let currentCard = null;
 const imgArray = shuffle(doubleImgArray);
-
-
+let counter = 0;
 
 function shuffle(arr) {
     const arrCopy = arr.slice();
@@ -33,8 +32,7 @@ function shuffle(arr) {
 
 function cardFieldBuilder(arr) {
     for (let i = 0; i < arr.length; i++) { 
-        const img = document.createElement("img");
-        img.setAttribute("data-card-id", arr[i].id); 
+        const img = document.createElement("img"); 
         img.src = cardBack;
         img.width = 200;
         img.height = 200;
@@ -42,32 +40,35 @@ function cardFieldBuilder(arr) {
             const clickedCard = event.target;
             clickedCard.classList.add("flipped");
             const flippedCards = document.querySelectorAll(".flipped");
-
+           
             if (currentCard === null) {
                 currentCard = arr[i].src; 
-            }
-            
+            }                    
             event.target.src = arr[i].src;
-                console.log("target", event.target.src);
-                console.log("current", currentCard); 
-            checkedCards (flippedCards, event);
-      }) ;    
+            isMatchCards (flippedCards, event);
+        }) ;    
       document.body.appendChild(img);
-}  
-console.log(arr);}
+    }
+}
 
-function checkedCards(flippedCards, event) {
+function isMatchCards(flippedCards, event) {
+    counter += 1;
+    
+    if (flippedCards.length === 1 && counter % 2 === 0) {
+        event.target.src = cardBack;
+        flippedCards.forEach(function (clickedCard) {
+             clickedCard.classList.remove("flipped");
+        })
+    }
+
     if (flippedCards.length === 2) {
-
+       
         if (flippedCards[0].getAttribute("src") 
         === flippedCards[1].getAttribute("src")) {
-
         console.log("match");
         flippedCards.forEach(function (clickedCard) {
           clickedCard.classList.remove("flipped"); 
           clickedCard.style.pointerEvents = "none";
-          flippedCards = null;
-          currentCard = null;
         });
 
         } else {
@@ -75,12 +76,14 @@ function checkedCards(flippedCards, event) {
           flippedCards.forEach(function (clickedCard) {
             clickedCard.classList.remove("flipped"); 
             setTimeout( () => clickedCard.src = cardBack, 1000);
-            console.log(clickedCard.src);
-          });      
-          flippedCards = null;
-          currentCard = null; 
-        }          
+          });               
+        }  
+      
+        flippedCards = null;
+        currentCard = null;   
+        counter = null;     
     };
+  
 }
 
 cardFieldBuilder(imgArray);
