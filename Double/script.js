@@ -11,7 +11,7 @@ const imgData = [
       src: "./img/mango.png",
       name: "Mango",
     },
-    ];
+];
 
 const cardBack = "./img/font.png";
 
@@ -19,7 +19,9 @@ const doubleImgArrayCopy =  imgData.concat(imgData);
 const doubleImgArray = doubleImgArrayCopy.map((a, i) => Object.assign({}, a));
 let currentCard = null;
 const imgArray = shuffle(doubleImgArray);
-let counter = 0;
+let matchedCardsCounter = 0;
+let seconds = 0;
+const secondsCounter = document.getElementById('seconds-counter');
 
 function shuffle(arr) {
     const arrCopy = arr.slice();
@@ -31,59 +33,67 @@ function shuffle(arr) {
   } 
 
 function cardFieldBuilder(arr) {
+  
     for (let i = 0; i < arr.length; i++) { 
         const img = document.createElement("img"); 
         img.src = cardBack;
         img.width = 200;
         img.height = 200;
-        img.addEventListener("click", function(event) {  
-            const clickedCard = event.target;
-            clickedCard.classList.add("flipped");
-            const flippedCards = document.querySelectorAll(".flipped");
-           
-            if (currentCard === null) {
-                currentCard = arr[i].src; 
-            }                    
-            event.target.src = arr[i].src;
-            isMatchCards (flippedCards, event);
-        }) ;    
-      document.body.appendChild(img);
-    }
-}
+        img.addEventListener("click", function(event) { 
 
-function isMatchCards(flippedCards, event) {
-    counter += 1;
-    
-    if (flippedCards.length === 1 && counter % 2 === 0) {
-        event.target.src = cardBack;
-        flippedCards.forEach(function (clickedCard) {
-             clickedCard.classList.remove("flipped");
-        })
-    }
+            if (secondsCounter.innerText === "") {
+              myTimer();
+              setInterval(myTimer, 1000); 
+            }
+            event.target.src = arr[i].src;
+            isMatchCards(event, arr);
+        }) ;         
+      document.body.appendChild(img);
+    }; 
+};
+
+function isMatchCards(event, arr) {
+    const clickedCard = event.target;
+    clickedCard.classList.add("flipped");
+    const flippedCards = document.querySelectorAll(".flipped");
 
     if (flippedCards.length === 2) {
-       
+
         if (flippedCards[0].getAttribute("src") 
         === flippedCards[1].getAttribute("src")) {
-        console.log("match");
-        flippedCards.forEach(function (clickedCard) {
-          clickedCard.classList.remove("flipped"); 
-          clickedCard.style.pointerEvents = "none";
-        });
+            matchedCardsCounter += 1; 
 
-        } else {
-          console.log("wrong");
-          flippedCards.forEach(function (clickedCard) {
+            flippedCards.forEach(function (clickedCard) {
             clickedCard.classList.remove("flipped"); 
-            setTimeout( () => clickedCard.src = cardBack, 1000);
-          });               
-        }  
-      
-        flippedCards = null;
-        currentCard = null;   
-        counter = null;     
-    };
-  
-}
+            clickedCard.style.pointerEvents = "none";
+        });        
+        checkStatusWon(arr);        
+        } else {
+            flippedCards.forEach(function (clickedCard) {
+              clickedCard.classList.remove("flipped"); 
+              setTimeout( () => clickedCard.src = cardBack, 1000);
+            });               
+        }    
+    }; 
+};
 
 cardFieldBuilder(imgArray);
+
+function myTimer() {
+    seconds += 1;
+    secondsCounter.innerText = seconds;
+   return(seconds);
+};
+
+function checkStatusWon(arr) {
+  if (matchedCardsCounter === arr.length/2 ) {
+    const endTime = secondsCounter.innerText;
+    restartGame(endTime);
+  }
+}
+
+function restartGame(endTime) {
+    seconds = 0;
+    clearInterval(myTimer());
+    secondsCounter.innerText = endTime;   
+}
