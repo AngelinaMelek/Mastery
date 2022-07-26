@@ -22,6 +22,13 @@ const imgArray = shuffle(doubleImgArray);
 let matchedCardsCounter = 0;
 let seconds = 0;
 const secondsCounter = document.getElementById('seconds-counter');
+const modal = document.querySelector("[data-modal-window]");
+const resultsArr = [];
+const resultsArrOfObj = [];
+
+function modalWindow(event) {
+    modal.style.display = "block";
+};
 
 function shuffle(arr) {
     const arrCopy = arr.slice();
@@ -36,9 +43,10 @@ function cardFieldBuilder(arr) {
   
     for (let i = 0; i < arr.length; i++) { 
         const img = document.createElement("img"); 
+        img.classList.add("card-style")
         img.src = cardBack;
-        img.width = 200;
-        img.height = 200;
+        img.width = 100;
+        img.height = 100;
         img.addEventListener("click", function(event) { 
 
             if (secondsCounter.innerText === "") {
@@ -88,12 +96,20 @@ function myTimer() {
 function checkStatusWon(arr) {
   if (matchedCardsCounter === arr.length/2 ) {
     const endTime = secondsCounter.innerText;
+    console.log(endTime);
+    modalWindow();
     restartGame(endTime);
   }
 }
 
 function restartGame(endTime) {
+    const playerName = document.getElementById("playerName"); 
     seconds = 0;
     clearInterval(myTimer());
     secondsCounter.innerText = endTime;   
+    resultsArr.name = playerName;
+    resultsArr.time = endTime;    
+    resultsArrOfObj.push(resultsArr);
+    localStorage.setItem("ScoreList", JSON.stringify(resultsArrOfObj));
 }
+

@@ -1,5 +1,77 @@
-html {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+:root {
+    --main-color: #e5ffff;
+    --bg-color: #DCE9E2;
+    --text-color: #212529;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: var(--main-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #FFFAF1;
+    width: 40%;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+}
+
+.modal-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.playerName {
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.playerName-button {
+    width: 30%;
+    display: block;
+    margin: 20px auto;
+}
+
+.card-style {
+    border: 2px solid pink;
+    border-radius: 40%;
+    background-color: #feecfe;
+    margin: 5px;
+    padding: 10px;
+}
+
+.time {
+    font-family: 'Lucida Sans', Verdana, sans-serif;
+    color: var(--text-color);
 }

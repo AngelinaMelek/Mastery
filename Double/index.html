@@ -9,8 +9,18 @@
     <title>Double</title>
 </head>
 <body>
-    <p>Time: &nbsp;<span id="seconds-counter"></span></p>
-
-    <!-- <p id="seconds-counter"></p> -->
+    <p class="time">Time: &nbsp;<span id="seconds-counter" data-modal="my-modal"></span></p>
+    <form>
+        <div data-modal-window="my-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <div class="modal-title">Congratulations!</div>   
+                </div>
+                <label for="playerName">Enter your name</label>
+                <input id="playerName" name="playerName" class="playerName" required/>
+                <button class="playerName-button">OK</button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
