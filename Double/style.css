@@ -1,5 +1,13 @@
 body {
     background-color: var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', Verdana, sans-serif;
+    color: var(--text-color);
+    font-size: 20px;
 }  
 
 .card-field {
@@ -12,10 +20,15 @@ body {
     height: 690px;
 }
 
+.border {
+    border: 2px solid pink;    
+    border-radius: 40%;
+}
+
 :root {
     --main-color: #e5ffff;
-    --bg-color: #DCE9E2;
-    --text-color: #212529;
+    --bg-color: #feecfe;
+    --text-color: #f784ee;
 }
 
 .modal {
@@ -54,30 +67,69 @@ body {
 .modal-title {
     font-size: 25px;
     font-weight: bold;
+    margin: 0 auto;
 }
 
 .playerName {
-    width: 80%;
+    width: 60%;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 10px auto;
 }
 
 .playerName-button {
     width: 30%;
     display: block;
     margin: 20px auto;
+    color: var(--text-color);
+    font-family: 'Lucida Sans', Verdana, sans-serif;
 }
 
 .card-style {
-    border: 2px solid pink;
-    border-radius: 40%;
-    background-color: #feecfe;
+    background-color: var(--bg-color);
     margin: 5px;
     padding: 10px;
 }
 
-.time {
-    font-family: 'Lucida Sans', Verdana, sans-serif;
+.link-style { 
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
     color: var(--text-color);
+} 
+
+.link-container {
+    list-style: none;
+    text-align: center;
+} 
+
+a:focus {
+    color: #ff35ff;
+    outline: auto;
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: var(--bg-color);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 50px auto;
+    border-radius: 50%;
+}
+
+.thead-th,
+.td-template {
+    width: 50%;
+    color: #ff70ff;
+    border-bottom: var(--text-color);
+}
+
+.table {
+    width: 40%;
+    margin: 100px 100px 0;
+    text-align: center;
+    background-color: var(--bg-color);
+    border-radius: 10%;
+    padding: 20px;
 }

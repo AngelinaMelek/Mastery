@@ -2,16 +2,58 @@
   const imgData = [
     {
       src: "../img/among.png",
-      name: "AmongUs",
+    },
+    {
+      src: "../img/apple.png",
+    },
+    {
+      src: "../img/birthday.png",
+    },
+    {
+      src: "../img/clear.png",
+    },
+    {
+      src: "../img/donut.png",
+    },
+    {
+      src: "../img/flowers.png",
     },
     {
       src: "../img/glasses.png",
-      name: "Glasses",
+    },
+    {
+      src: "../img/hamster.png",
+    },
+    {
+      src: "../img/heart.png",
+    },
+    {
+      src: "../img/lights.png",
+    }, 
+    {
+      src: "../img/mandala.png",
     },
     {
       src: "../img/mango.png",
-      name: "Mango",
+    },    
+    {
+      src: "../img/mickey.png",
     },
+    {
+      src: "../img/potato.png",
+    },
+    {
+      src: "../img/program.png",
+    },
+    {
+      src: "../img/rose.png",
+    },
+    {
+      src: "../img/tree.png",
+    },
+    {
+      src: "../img/yckrdL6ei.png",
+    }, 
   ];
   
   const cardBack = "../img/font.png";
@@ -27,7 +69,6 @@
   const playerName = document.getElementById("playerName"); 
   
   let matchedCardsCounter = 0;
-  let currentCard = null;
   let resultsObj = {};
   let seconds = 0;
   let intervalID = null;
@@ -47,19 +88,20 @@
   function cardFieldBuilder(arr) {
     for (let i = 0; i < arr.length; i++) { 
       const img = document.createElement("img"); 
-      img.classList.add("card-style")
+      img.classList.add("card-style");
+      img.classList.add("border");
       img.src = cardBack;
       img.width = 80;
       img.height = 80;
       img.addEventListener("click", function(event) { 
-
-        if (secondsCounter.innerText === "") {
+        if (secondsCounter.textContent=== "") {
           myTimer();
           intervalID = setInterval(myTimer, 1000);         
         }
+
         event.target.src = arr[i].src;
         isMatchCards(event, arr);
-      }) ;      
+      });      
       cardField.appendChild(img);   
     }; 
   };
