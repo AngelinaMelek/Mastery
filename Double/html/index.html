@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">    
+    <script src="../js/game.js" defer></script>
+    <title>Double</title>
+</head>
+<body>
+    <p class="time">Time: &nbsp;<span id="seconds-counter" data-modal="my-modal"></span></p>
+    <div class="card-field" id="cardField"></div>
+    <form>
+        <div data-modal-window="my-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <div class="modal-title">Congratulations!</div>   
+                </div>
+                <label for="playerName">Enter your name</label>
+                <input id="playerName" name="playerName" class="playerName" required/>
+                <button class="playerName-button">OK</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
